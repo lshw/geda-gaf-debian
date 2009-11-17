@@ -1,0 +1,20 @@
+geda-gaf (1:1.6.0-0~pcjc2.1) karmic; urgency=low
+
+  * gEDA 1.6.0 upstream release
+
+ -- Peter Clifton <pcjc2@cam.ac.uk>  Wed, 07 Oct 2009 19:24:27 +0100
+
+geda-gaf (1:1.5.4-0~pcjc2.1) jaunty; urgency=low
+
+  * gEDA 1.5.4 upstream release
+  * Initial attempt at unified debian package.
+  * Based on geda-* Debian packages by Hamish Moffatt.
+  * Fix dependancy of >= $UPSTREAM_VERSION to match the exact debian
+    version of libgeda which was built with this source package.
+  * Added conflict between geda-symbols and the old libgeda33 package,
+    since the new symbols rely on file-format changes not present in
+    that version.
+  * Remove buggy workaround for gxyrs install location (fixed upstream)
+  * Remove resetting of executable bit on some examples (fixed upstream)
+
+ -- Peter Clifton <pcjc2@cam.ac.uk>  Mon, 31 Aug 2009 13:47:00 +0100

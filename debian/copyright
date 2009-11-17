@@ -1,0 +1,12 @@
+This is a beta testing package of gEDA. The gEDA sources were downloaded
+from http://git.gpleda.org/. The package was created by Peter Clifton,
+January 5, 2009. They were largely based on Debian packages for gEDA
+maintained by Hamish Moffatt.
+
+This software is released under the GNU General Public License,
+version 2; please see /usr/share/common-licenses/GPL on your Debian
+system.
+
+gEDA was written by Ales Hvezda and others on the gEDA mailing
+list <geda-dev@geda.seul.org>. See http://www.geda.seul.org/
+for further information.

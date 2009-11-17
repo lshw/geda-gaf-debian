@@ -1,0 +1,126 @@
+Source: geda-gaf
+Section: electronics
+Priority: optional
+Maintainer: Peter Clifton <pcjc2@cam.ac.uk>
+Uploaders: Peter Clifton <pcjc2@cam.ac.uk>
+Standards-Version: 3.7.3
+Build-Depends: debhelper (>= 5.0.51~), libgtk2.0-dev, guile-1.8-dev [!ia64], guile-1.6-dev [ia64], libgd2-xpm-dev | libgd2-dev, libxml-parser-perl, gs-common, transfig, libstroke0-dev, groff, libxml-parser-perl, libglib2.0-dev, flex, intltool
+Homepage: http://geda.seul.org/
+
+Package: geda
+Architecture: all
+Depends: geda-gschem, geda-gnetlist, geda-doc
+Recommends: geda-gsymcheck, geda-gattrib, extra-xdg-menus
+Suggests: geda-utils, geda-examples, gerbv, pcb
+Description: GPL EDA -- Electronics design software
+ GPL EDA, an electronics design package.
+ .
+ This is a meta-package which depends on the components required
+ for a typical gEDA installation.
+
+Package: libgeda38
+Architecture: any
+Depends: ${shlibs:Depends}, libgeda-common (>= ${source:Version}), libgeda-common (<< ${source:Version}.1~)
+Description: GPL EDA -- Electronics design software -- library files
+ Library files for GPL EDA, an electronics design package, including
+ gschem, a schematic editor.
+ .
+ This package contains shared libraries for gEDA.
+
+Package: libgeda-dev
+Architecture: any
+Section: libdevel
+Depends: libgeda-common (>= ${source:Version}), libgeda-common (<< ${source:Version}.1~), libgeda35, libgtk2.0-dev, guile-1.8-dev [!ia64], guile-1.6-dev [ia64], libgd2-xpm-dev | libgd2-dev
+Description: GPL EDA -- Electronics design software -- development files
+ Library development files for GPL EDA, an electronics design package,
+ including gschem, a schematic editor.
+ .
+ This package contains development library files for gEDA.
+ You only need to install this package if you wish to recompile
+ the geda-* client packages.
+
+Package: libgeda-common
+Architecture: all
+Conflicts: libgeda20, libgeda29, geda-symbols (<< 1:1.2.0)
+Replaces: geda-symbols (<< 1:1.2.0)
+Description: GPL EDA -- Electronics design software -- data files
+ Common library files for GPL EDA, an electronics design package,
+ including gschem, a schematic editor.
+ .
+ This package contains data library files for gEDA.
+
+Package: geda-symbols
+Architecture: all
+Conflicts: libgeda20, libgeda29, libgeda33
+Description: Symbols for GPL EDA -- Electronics design software
+ GPL EDA, an electronics design package, including
+ gschem, a schematic editor.
+ .
+ This package includes the device symbols files for gschem.
+
+Package: geda-gschem
+Architecture: any
+Conflicts: geda (<= 19990516-1)
+Depends: ${shlibs:Depends}, geda-symbols (>= 1:1.5.1)
+Description: GPL EDA -- Electronics design software -- schematic editor
+ GPL EDA, an electronics design package, including
+ gschem, a schematic editor.
+ .
+ This package contains gschem, the schematic editor.
+
+Package: geda-gattrib
+Architecture: any
+Conflicts: geda (<= 19990516-1)
+Depends: ${shlibs:Depends}, geda-symbols (>= 1:1.5.1)
+Description: GPL EDA -- Electronics design software -- attribute editor
+ GPL EDA, an electronics design package, including
+ gschem, a schematic editor.
+ .
+ This package contains gattrib, the attribute editor.
+
+Package: geda-gnetlist
+Architecture: any
+Conflicts: geda (<= 19990516-1)
+Depends: ${shlibs:Depends}, geda-symbols (>= 1:1.5.1), gawk
+Description: GPL EDA -- Electronics design software -- netlister
+ GPL EDA, an electronics design package, including
+ gschem, a schematic editor.
+ .
+ This package contains the netlist generator, gnetlist.
+
+Package: geda-gsymcheck
+Architecture: any
+Depends: ${shlibs:Depends}, geda-symbols (>= 1:1.5.1)
+Description: GPL EDA -- Electronics design software -- symbol checker
+ GPL EDA, an electronics design package, including
+ gschem, a schematic editor.
+ .
+ This package contains the symbol checker, gsymcheck.
+
+Package: geda-utils
+Architecture: any
+Conflicts: geda (<= 19990516-1)
+Depends: ${shlibs:Depends}, python
+Description: GPL EDA -- Electronics design software -- utilities
+ GPL EDA, an electronics design package, including
+ gschem, a schematic editor.
+ .
+ This package contains miscellaneous utilities related to gEDA.
+
+Package: geda-examples
+Recommends: geda
+Architecture: all
+Description: GPL EDA -- Electronics design software -- example designs
+ GPL is a collection of tools for designing electronic circuits
+ and printed circuit boards.
+ .
+ This package contains example designs created with gEDA.
+
+Package: geda-doc
+Architecture: all
+Description: Documentation for GPL EDA -- Electronics design software
+ GPL EDA, an electronics design package, including
+ gschem, a schematic editor.
+ .
+ This package contains the documentation.
+

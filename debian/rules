@@ -1,0 +1,206 @@
+#!/usr/bin/make -f
+
+DEBIAN_VERSION := $(shell dpkg-parsechangelog | grep Version: | cut -f 2 -d ' ')
+UPSTREAM_VERSION := $(shell dpkg-parsechangelog | grep Version: | cut -f 2 -d ' ' | cut -f 1 -d '-')
+
+LIBPKG=libgeda38
+DEVPKG=libgeda-dev
+COMMONPKG=libgeda-common
+
+RCDIR=/etc/gEDA
+INFODIR=/usr/share/info
+PREFIX=/usr
+PKG_CONFIG_PATH=$(CURDIR)/libgeda
+CFLAGS=-O2 -g -Wall
+
+# Patch the generated libtool to avoid passing -rpath when linking,
+# and to explicitly link libraries against the libraries they depend on.
+define fixup-libtool
+sed < libtool > libtool-2 \
+-e 's/^hardcode_libdir_flag_spec.*$$/hardcode_libdir_flag_spec=" -D__LIBTOOL_IS_A_FOOL__ "/' \
+-e '/^archive_cmds="/s/"$$/ \\$$deplibs"/' && \
+mv libtool-2 libtool && \
+chmod 755 libtool
+endef
+
+define find-libgeda
+PKG_CONFIG_PATH=$(PKG_CONFIG_PATH)
+endef
+
+# *********************************** BUILD ***********************************
+build: build-stamp
+build-stamp:
+	dh_testdir
+	# ------------------------------- CONFIGURE -------------------------------
+	./configure --prefix=${PREFIX}                                            \
+	            --with-rcdir=${RCDIR}                                         \
+	            --infodir=${INFODIR}                                          \
+	            --disable-static                                              \
+	            --disable-update-xdg-database                                 \
+	            --disable-rpath
+	#$(fixup-libtool)
+	# --------------------------------- BUILD ---------------------------------
+	$(MAKE) CFLAGS="${CFLAGS}"
+	# --------------------------------- STAMP ---------------------------------
+	touch build-stamp
+# *****************************************************************************
+
+
+# ****************************** INSTALL FILES ********************************
+install: build
+	dh_testdir
+	dh_testroot
+
+	cd libgeda   && $(MAKE) install DESTDIR=$(CURDIR)/debian/$(LIBPKG)
+	cd gschem    && $(MAKE) install DESTDIR=$(CURDIR)/debian/geda-gschem
+	cd gattrib   && $(MAKE) install DESTDIR=$(CURDIR)/debian/geda-gattrib
+	cd gnetlist  && $(MAKE) install DESTDIR=$(CURDIR)/debian/geda-gnetlist
+	cd gsymcheck && $(MAKE) install DESTDIR=$(CURDIR)/debian/geda-gsymcheck
+	cd utils     && $(MAKE) install DESTDIR=$(CURDIR)/debian/geda-utils
+
+	cd symbols   && $(MAKE) install DESTDIR=$(CURDIR)/debian/geda-symbols
+	cd libgeda   && $(MAKE) install-data DESTDIR=$(CURDIR)/debian/$(COMMONPKG)
+	cd docs      && $(MAKE) install DESTDIR=$(CURDIR)/debian/geda-doc
+	cd examples  && $(MAKE) install DESTDIR=$(CURDIR)/debian/geda-examples
+# *****************************************************************************
+
+# *********************************** CLEAN ***********************************
+clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp
+	dh_prep
+	[ ! -f Makefile ] || $(MAKE) distclean
+	dh_clean
+# *****************************************************************************
+
+
+# Build architecture-independent files here. Includes the info directory.
+binary-indep: install
+	dh_installdirs -i
+
+	dh_installdocs -i
+
+	dh_installchangelogs libgeda/ChangeLog   -p $(COMMONPKG)
+	dh_installchangelogs symbols/ChangeLog   -p geda-symbols
+	dh_installchangelogs docs/ChangeLog      -p geda-doc
+	dh_installchangelogs examples/ChangeLog  -p geda-examples
+
+	# Fixup libgeda-common package
+	# Remove everything in /usr except share
+	for f in debian/$(COMMONPKG)/usr/*; do [ `basename $$f` = "share" ] || rm -rf $$f ; done
+	# Remove the localisation files from this package, they are soversion specific
+	rm -rf debian/$(COMMONPKG)/usr/share/locale
+
+	# Work around install locations in geda-examples
+	cd debian/geda-examples/usr/share/doc && mv geda-gaf/examples/* geda-examples/examples/
+	rmdir debian/geda-examples/usr/share/doc/geda-gaf/examples
+	rmdir debian/geda-examples/usr/share/doc/geda-gaf
+
+	dh_installmime -p $(COMMONPKG)
+	dh_icons       -p $(COMMONPKG)
+	dh_strip -i
+	dh_compress -i -Xwiki -X.sch -Xgeda-examples/examples
+	dh_fixperms -i
+	dh_installdeb -i
+#	dh_makeshlibs -V -i
+#	dh_shlibdeps -i
+	dh_gencontrol -i
+	dh_md5sums -i
+	dh_builddeb -i
+
+# Build architecture-dependent files here.
+binary-arch: install
+	dh_installdirs -a
+
+	dh_installchangelogs gschem/ChangeLog    -p geda-gschem
+	dh_installchangelogs gattrib/ChangeLog   -p geda-gattrib
+	dh_installchangelogs gnetlist/ChangeLog  -p geda-gnetlist
+	dh_installchangelogs gsymcheck/ChangeLog -p geda-gsymcheck
+	dh_installchangelogs utils/ChangeLog                          \
+	                     utils/ChangeLog.gsch2pcb                 \
+	                     utils/ChangeLog.tragesym -p geda-utils
+
+	dh_installman utils/man/grenum.1              -p geda-utils
+	dh_installman gsymcheck/docs/gsymcheck.1      -p geda-gsymcheck
+	dh_installman gschem/docs/gschem.1            -p geda-gschem
+	dh_installman gnetlist/docs/gnetlist.1        -p geda-gnetlist
+
+	dh_installexamples utils/examples/*           -p geda-utils
+	dh_installexamples gschem/examples/*.sch                      \
+	                   gschem/examples/README*    -p geda-gschem
+	dh_installexamples gnetlist/examples/vams                     \
+	                   gnetlist/examples/switcap                  \
+	                   gnetlist/examples/*.sch    -p geda-gnetlist
+	cp gnetlist/scripts/*.sh debian/geda-gnetlist/usr/share/doc/geda-gnetlist/examples/scripts
+
+#	dh_installmenu -p geda-gschem
+
+	dh_icons       -p geda-gschem
+	dh_icons       -p geda-gattrib
+
+	dh_desktop     -p geda-gschem
+	dh_desktop     -p geda-gattrib
+
+	# Shuffle stuff between the various libgeda packages
+	# move the development stuff to the -dev package
+	mv debian/$(LIBPKG)/usr/include debian/$(DEVPKG)/usr
+	mv debian/$(LIBPKG)/usr/lib/libgeda.so debian/$(DEVPKG)/usr/lib
+	mv debian/$(LIBPKG)/usr/lib/libgeda.la debian/$(DEVPKG)/usr/lib
+	mv debian/$(LIBPKG)/usr/lib/pkgconfig debian/$(DEVPKG)/usr/lib
+	# clean up the remaining library files
+	rm -rf debian/$(LIBPKG)/usr/share/gEDA
+	rm -rf debian/$(LIBPKG)/usr/share/icons/
+	rm -rf debian/$(LIBPKG)/usr/share/mime/
+	rm -rf debian/$(LIBPKG)/usr/share/mimelnk/
+	rm -rf debian/$(LIBPKG)/etc
+	# Link documentation between for libgeda and libgeda-dev to libgeda-common
+	ln -s $(COMMONPKG) debian/$(DEVPKG)/usr/share/doc/$(DEVPKG)
+	mkdir -p debian/$(LIBPKG)/usr/share/doc/
+	ln -s $(COMMONPKG) debian/$(LIBPKG)/usr/share/doc/$(LIBPKG)
+
+	# Work around install locations in geda-gschem
+	-rm -rf debian/geda-gschem/usr/man
+	-rm -rf debian/geda-gschem/usr/share/info/dir*
+	find debian/geda-gschem/usr/share/doc -empty -exec rm -f {} ';'
+
+	# Work around install locations in geda-gattrib
+	-rm -rf debian/geda-gattrib/usr/man
+	-rm -rf debian/geda-gattrib/usr/share/info/dir*
+
+	# Work around install locations in geda-gnetlist
+	-rm -rf debian/geda-gnetlist/usr/man
+	mv debian/geda-gnetlist/usr/share/doc/geda-gaf/*              \
+	     debian/geda-gnetlist/usr/share/doc/geda-gnetlist/
+	rmdir debian/geda-gnetlist/usr/share/doc/geda-gaf
+	# Apparently Debian doesn't package this one
+	rm debian/geda-gnetlist/usr/bin/sch2eaglepos.sh
+
+	# Work around install locations in geda-gsymcheck
+	-rm -rf debian/geda-gsymcheck/usr/man
+	cd debian/geda-gsymcheck/usr/share/doc && mv geda-gaf/* geda-gsymcheck/
+	mv debian/geda-gsymcheck/usr/share/doc/geda-gsymcheck/man/*.html     \
+	     debian/geda-gsymcheck/usr/share/doc/geda-gsymcheck
+	-rm -rf debian/geda-gsymcheck/usr/share/doc/geda-gsymcheck/man
+	rmdir debian/geda-gsymcheck/usr/share/doc/geda-gaf
+
+	# Work around install locations in geda-utils
+	rm -rf debian/geda-utils/usr/man
+	cd debian/geda-utils/usr/bin && mv gnet_hier_verilog.sh gnet_hier_verilog
+	cd debian/geda-utils/usr/bin && mv gsymfix.pl gsymfix
+	cd debian/geda-utils/usr/share/doc && mv geda-gaf/* geda-utils/
+	rmdir debian/geda-utils/usr/share/doc/geda-gaf
+
+	dh_strip -a
+	dh_compress -a -X.sch -X.sym
+	dh_fixperms -a
+	dh_installdeb -a
+#	dh_makeshlibs -a -V'$(LIBPKG) (>= $(UPSTREAM_VERSION))'
+	dh_makeshlibs -a -V'$(LIBPKG) (= $(DEBIAN_VERSION))'
+	dh_shlibdeps -a
+	dh_gencontrol -a
+	dh_md5sums -a
+	dh_builddeb -a
+
+binary: binary-indep binary-arch
+.PHONY: prep build clean binary-indep binary-arch binary

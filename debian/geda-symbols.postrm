@@ -1,0 +1,17 @@
+#!/bin/sh
+
+OLDCONF=/etc/gEDA/system-gafrc
+if [ "$1" = purge ]; then
+	# geda-symbols used to own /etc/gEDA/system-gafrc, but now it
+	# belongs to libgeda-common. If that package is installed and
+	# owns the config file, don't remove it here.
+	if [ -f /var/lib/dpkg/info/libgeda-common.conffiles ]; then
+		if ! grep -q $OLDCONF /var/lib/dpkg/info/libgeda-common.conffiles ; then
+			echo Removing old configuration file $OLDCONF ...
+			rm -f $OLDCONF || true
+		fi
+	fi
+fi
+
+#DEBHELPER#
+
