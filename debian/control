@@ -3,8 +3,8 @@ Section: electronics
 Priority: optional
 Maintainer: Peter Clifton <pcjc2@cam.ac.uk>
 Uploaders: Peter Clifton <pcjc2@cam.ac.uk>
-Standards-Version: 3.7.3
-Build-Depends: debhelper (>= 5.0.51~), libgtk2.0-dev, guile-1.8-dev [!ia64], guile-1.6-dev [ia64], libgd2-xpm-dev | libgd2-dev, libxml-parser-perl, gs-common, transfig, libstroke0-dev, groff, libxml-parser-perl, libglib2.0-dev, flex, intltool
+Standards-Version: 3.8.3
+Build-Depends: debhelper (>= 7.0.50~), libgtk2.0-dev, guile-1.8-dev [!ia64], guile-1.6-dev [ia64], libgd2-xpm-dev | libgd2-dev, libxml-parser-perl, gs-common, transfig, libstroke0-dev, groff, libxml-parser-perl, libglib2.0-dev, flex, intltool
 Homepage: http://geda.seul.org/
 
 Package: geda

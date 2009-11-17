@@ -1,0 +1,4 @@
+gnetlist/examples/vams
+gnetlist/examples/switcap
+gnetlist/examples/*.sch
+gnetlist/scripts

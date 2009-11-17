@@ -1,0 +1,2 @@
+version=3
+http://geda.seul.org/release/v(?:[\d\.]+)/(?:[\d\.]+)/geda-gaf-([\d\.]+)\.tar\.gz
