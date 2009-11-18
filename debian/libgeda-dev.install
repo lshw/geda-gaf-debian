@@ -1,0 +1,4 @@
+usr/include
+usr/lib/libgeda.so
+usr/lib/libgeda.la
+usr/lib/pkgconfig
