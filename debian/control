@@ -117,6 +117,7 @@ Description: GPL EDA -- Electronics design software -- example designs
  This package contains example designs created with gEDA.
 
 Package: geda-doc
+Section: doc
 Architecture: all
 Description: Documentation for GPL EDA -- Electronics design software
  GPL EDA, an electronics design package, including
