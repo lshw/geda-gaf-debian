@@ -81,7 +81,7 @@ Description: GPL EDA -- Electronics design software -- attribute editor
 Package: geda-gnetlist
 Architecture: any
 Conflicts: geda (<= 19990516-1)
-Depends: ${shlibs:Depends}, geda-symbols (>= 1:1.5.1), gawk
+Depends: ${shlibs:Depends}, geda-symbols (>= 1:1.5.1), mawk
 Description: GPL EDA -- Electronics design software -- netlister
  GPL EDA, an electronics design package, including
  gschem, a schematic editor.
