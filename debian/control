@@ -15,7 +15,7 @@ Suggests: geda-utils, geda-examples, gerbv, pcb
 Description: GPL EDA -- Electronics design software
  GPL EDA, an electronics design package.
  .
- This is a meta-package which depends on the components required
+ This is a metapackage which depends on the components required
  for a typical gEDA installation.
 
 Package: libgeda38
