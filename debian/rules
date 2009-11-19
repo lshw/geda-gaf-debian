@@ -36,8 +36,8 @@ override_dh_auto_install:
 
 override_dh_install:
 	dh_install
-	# Apparently Debian doesn't package this one
-	#rm debian/geda-gnetlist/usr/bin/sch2eaglepos.sh
+	# This script is already installed in examples dir:
+	rm debian/geda-gnetlist/usr/bin/sch2eaglepos.sh
 
 	# Work around install locations in geda-utils
 	cd debian/geda-utils/usr/bin && mv gnet_hier_verilog.sh gnet_hier_verilog
@@ -46,6 +46,7 @@ override_dh_install:
 override_dh_installdocs:
 	dh_installdocs -N$(LIBPKG) -N$(COMMONPKG) -N$(DEVPKG) -Ngeda -Ngeda-doc
 	dh_installdocs -pgeda -pgeda-doc --link-doc=geda-doc
+	dh_installdocs -p$(LIBPKG) -p$(COMMONPKG) -p$(DEVPKG) --link-doc=$(COMMONPKG)
 	# Work around install location in some geda- packages:
 	for p in geda-gnetlist geda-gschem geda-gsymcheck geda-utils geda-symbols geda-doc; do \
 		mv debian/$$p/usr/share/doc/geda-gaf/man/*  \
@@ -55,7 +56,6 @@ override_dh_installdocs:
 	   	debian/$$p/usr/share/doc/$$p/ ; \
 		rm -rf debian/$$p/usr/share/doc/geda-gaf ; \
 	done
-	dh_installdocs -p$(LIBPKG) -p$(COMMONPKG) -p$(DEVPKG) --link-doc=$(COMMONPKG)
 
 override_dh_installchangelogs:
 	dh_installchangelogs libgeda/ChangeLog   -p $(COMMONPKG)
