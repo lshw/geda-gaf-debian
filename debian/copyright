@@ -1,12 +1,32 @@
-This is a beta testing package of gEDA. The gEDA sources were downloaded
-from http://git.gpleda.org/. The package was created by Peter Clifton,
-January 5, 2009. They were largely based on Debian packages for gEDA
-maintained by Hamish Moffatt.
+Format-Specification: http://dep.debian.net/deps/dep5/
+Name: geda-gaf
+Maintainer: Ales Hvezda and gEDA Contributors <geda-dev@geda.seul.org>
+Source: http://geda.seul.org
 
-This software is released under the GNU General Public License,
-version 2; please see /usr/share/common-licenses/GPL on your Debian
-system.
+Copyright: 1998-2009, Ales Hvezda and gEDA Contributors <geda-dev@geda.seul.org> (see changelog for details)
+License: GPL-2+
 
-gEDA was written by Ales Hvezda and others on the gEDA mailing
-list <geda-dev@geda.seul.org>. See http://www.geda.seul.org/
-for further information.
+On Debian systems, the complete text of the GNU GPL2 licenses
+can be found at `/usr/share/common-licenses/GPL-2'.
+
+Files: debian/*
+Copyright: 1998-2009, Hamish Moffatt <hamish@debian.org>
+           2009, Peter Clifton <pcjc2@cam.ac.uk>
+           2009, أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users@users.sourceforge.net>
+License: GPL-2+
+
+License: GPL-2+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301,
+    USA.
