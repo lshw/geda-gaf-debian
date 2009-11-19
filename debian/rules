@@ -3,47 +3,55 @@
 %:
 	dh $@
 
-# Patch the generated libtool to avoid passing -rpath when linking,
-# and to explicitly link libraries against the libraries they depend on.
-define fixup-libtool
-sed < libtool > libtool-2 \
--e 's/^hardcode_libdir_flag_spec.*$$/hardcode_libdir_flag_spec=" -D__LIBTOOL_IS_A_FOOL__ "/' \
--e '/^archive_cmds="/s/"$$/ \\$$deplibs"/' && \
-mv libtool-2 libtool && \
-chmod 755 libtool
-endef
-
-PKG_CONFIG_PATH=$(CURDIR)/libgeda
-
-define find-libgeda
-PKG_CONFIG_PATH=$(PKG_CONFIG_PATH)
-endef
-
 override_dh_auto_configure:
 	dh_auto_configure -- --with-rcdir=/etc/gEDA 				\
 	                     --disable-static               \
 	                     --disable-update-xdg-database	\
-	                     --disable-rpath
+	                     --disable-rpath LDFLAGS="$(LDFLAGS) -Wl,--as-needed"
 
 override_dh_auto_build:
-	dh_auto_build -- CFLAGS="-O2 -g -Wall"
+	dh_auto_build
+
+override_dh_auto_test:
+	make check
 
 LIBPKG=libgeda38
 DEVPKG=libgeda-dev
 COMMONPKG=libgeda-common
 
 override_dh_auto_install:
-	dh_auto_install --sourcedirectory=libgeda -- DESTDIR=$(CURDIR)/debian/$(LIBPKG)
-	dh_auto_install --sourcedirectory=gschem -- DESTDIR=$(CURDIR)/debian/geda-gschem
-	dh_auto_install --sourcedirectory=gattrib -- DESTDIR=$(CURDIR)/debian/geda-gattrib
-	dh_auto_install --sourcedirectory=gnetlist -- DESTDIR=$(CURDIR)/debian/geda-gnetlist
-	dh_auto_install --sourcedirectory=gsymcheck -- DESTDIR=$(CURDIR)/debian/geda-gsymcheck
-	dh_auto_install --sourcedirectory=utils -- DESTDIR=$(CURDIR)/debian/geda-utils
-	dh_auto_install --sourcedirectory=symbols -- DESTDIR=$(CURDIR)/debian/geda-symbols
-	dh_auto_install --sourcedirectory=docs -- DESTDIR=$(CURDIR)/debian/geda-doc
-	dh_auto_install --sourcedirectory=examples -- DESTDIR=$(CURDIR)/debian/geda-examples
-	# check this:
-	dh_auto_install --sourcedirectory=libgeda -- install-data DESTDIR=$(CURDIR)/debian/$(COMMONPKG)
+	cd libgeda   && $(MAKE) install DESTDIR=$(CURDIR)/debian/tmp
+	cd gschem    && $(MAKE) install DESTDIR=$(CURDIR)/debian/geda-gschem
+	cd gattrib   && $(MAKE) install DESTDIR=$(CURDIR)/debian/geda-gattrib
+	cd gnetlist  && $(MAKE) install DESTDIR=$(CURDIR)/debian/geda-gnetlist
+	cd gsymcheck && $(MAKE) install DESTDIR=$(CURDIR)/debian/geda-gsymcheck
+	cd utils     && $(MAKE) install DESTDIR=$(CURDIR)/debian/geda-utils
+	cd symbols   && $(MAKE) install DESTDIR=$(CURDIR)/debian/geda-symbols
+	cd docs      && $(MAKE) install DESTDIR=$(CURDIR)/debian/geda-doc
+	cd examples  && $(MAKE) install DESTDIR=$(CURDIR)/debian/geda-examples
+
+override_dh_install:
+	dh_install
+	# Apparently Debian doesn't package this one
+	#rm debian/geda-gnetlist/usr/bin/sch2eaglepos.sh
+
+	# Work around install locations in geda-utils
+	cd debian/geda-utils/usr/bin && mv gnet_hier_verilog.sh gnet_hier_verilog
+	cd debian/geda-utils/usr/bin && mv gsymfix.pl gsymfix
+
+override_dh_installdocs:
+	dh_installdocs -N$(LIBPKG) -N$(COMMONPKG) -N$(DEVPKG) -Ngeda -Ngeda-doc
+	# Work around install location in some geda- packages:
+	for p in geda-gnetlist geda-gschem geda-gsymcheck geda-utils geda-symbols geda-doc; do \
+		mv debian/$$p/usr/share/doc/geda-gaf/man/*  \
+	   	debian/$$p/usr/share/doc/$$p/ ; \
+		rmdir debian/$$p/usr/share/doc/geda-gaf/man ; \
+		mv debian/$$p/usr/share/doc/geda-gaf/*  \
+	   	debian/$$p/usr/share/doc/$$p/ ; \
+		rm -rf debian/$$p/usr/share/doc/geda-gaf ; \
+	done
+	dh_installdocs -p$(LIBPKG) -p$(COMMONPKG) -p$(DEVPKG) --link-doc=$(COMMONPKG)
+	dh_installdocs -pgeda -pgeda-doc --link-doc=geda-doc
 
 override_dh_installchangelogs:
 	dh_installchangelogs libgeda/ChangeLog   -p $(COMMONPKG)
@@ -54,93 +62,18 @@ override_dh_installchangelogs:
 	dh_installchangelogs gattrib/ChangeLog   -p geda-gattrib
 	dh_installchangelogs gnetlist/ChangeLog  -p geda-gnetlist
 	dh_installchangelogs gsymcheck/ChangeLog -p geda-gsymcheck
-	dh_installchangelogs utils/ChangeLog                          \
-	                     utils/ChangeLog.gsch2pcb                 \
-	                     utils/ChangeLog.tragesym -p geda-utils
+	dh_installchangelogs utils/ChangeLog     -p geda-utils
+
+override_dh_installexamples:
+	dh_installexamples
+	# Work around install locations in geda-examples
+	cd debian/geda-examples/usr/share/doc && mv geda-gaf/examples geda-examples/
+	rmdir debian/geda-examples/usr/share/doc/geda-gaf
 
 override_dh_compress:
-	dh_compress -i -Xwiki -X.sch -Xgeda-examples/examples
+	dh_compress -Xwiki -X.sch -Xgeda-examples/examples -X.sym
 
 DEBIAN_VERSION := $(shell dpkg-parsechangelog | grep Version: | cut -f 2 -d ' ')
-UPSTREAM_VERSION := $(shell dpkg-parsechangelog | grep Version: | cut -f 2 -d ' ' | cut -f 1 -d '-')
 
-binary-indep: install
-
-	# Fixup libgeda-common package
-	# Remove everything in /usr except share
-	for f in debian/$(COMMONPKG)/usr/*; do [ `basename $$f` = "share" ] || rm -rf $$f ; done
-	# Remove the localisation files from this package, they are so version specific
-	rm -rf debian/$(COMMONPKG)/usr/share/locale
-
-	# Work around install locations in geda-examples
-	cd debian/geda-examples/usr/share/doc && mv geda-gaf/examples/* geda-examples/examples/
-	rmdir debian/geda-examples/usr/share/doc/geda-gaf/examples
-	rmdir debian/geda-examples/usr/share/doc/geda-gaf
-#	dh_installmime -p $(COMMONPKG)
-#	dh_icons       -p $(COMMONPKG)
-
-# Build architecture-dependent files here.
-binary-arch: install
-
-	# Shuffle stuff between the various libgeda packages
-	# move the development stuff to the -dev package
-	mv debian/$(LIBPKG)/usr/include debian/$(DEVPKG)/usr
-	mv debian/$(LIBPKG)/usr/lib/libgeda.so debian/$(DEVPKG)/usr/lib
-	mv debian/$(LIBPKG)/usr/lib/libgeda.la debian/$(DEVPKG)/usr/lib
-	mv debian/$(LIBPKG)/usr/lib/pkgconfig debian/$(DEVPKG)/usr/lib
-	# clean up the remaining library files
-	rm -rf debian/$(LIBPKG)/usr/share/gEDA
-	rm -rf debian/$(LIBPKG)/usr/share/icons/
-	rm -rf debian/$(LIBPKG)/usr/share/mime/
-	rm -rf debian/$(LIBPKG)/usr/share/mimelnk/
-	rm -rf debian/$(LIBPKG)/etc
-	# Link documentation between for libgeda and libgeda-dev to libgeda-common
-	ln -s $(COMMONPKG) debian/$(DEVPKG)/usr/share/doc/$(DEVPKG)
-	mkdir -p debian/$(LIBPKG)/usr/share/doc/
-	ln -s $(COMMONPKG) debian/$(LIBPKG)/usr/share/doc/$(LIBPKG)
-
-	# Work around install locations in geda-gschem
-	-rm -rf debian/geda-gschem/usr/man
-	-rm -rf debian/geda-gschem/usr/share/info/dir*
-	find debian/geda-gschem/usr/share/doc -empty -exec rm -f {} ';'
-
-	# Work around install locations in geda-gattrib
-	-rm -rf debian/geda-gattrib/usr/man
-	-rm -rf debian/geda-gattrib/usr/share/info/dir*
-
-	# Work around install locations in geda-gnetlist
-	-rm -rf debian/geda-gnetlist/usr/man
-	mv debian/geda-gnetlist/usr/share/doc/geda-gaf/*              \
-	     debian/geda-gnetlist/usr/share/doc/geda-gnetlist/
-	rmdir debian/geda-gnetlist/usr/share/doc/geda-gaf
-	# Apparently Debian doesn't package this one
-	rm debian/geda-gnetlist/usr/bin/sch2eaglepos.sh
-
-	# Work around install locations in geda-gsymcheck
-	-rm -rf debian/geda-gsymcheck/usr/man
-	cd debian/geda-gsymcheck/usr/share/doc && mv geda-gaf/* geda-gsymcheck/
-	mv debian/geda-gsymcheck/usr/share/doc/geda-gsymcheck/man/*.html     \
-	     debian/geda-gsymcheck/usr/share/doc/geda-gsymcheck
-	-rm -rf debian/geda-gsymcheck/usr/share/doc/geda-gsymcheck/man
-	rmdir debian/geda-gsymcheck/usr/share/doc/geda-gaf
-
-	# Work around install locations in geda-utils
-	rm -rf debian/geda-utils/usr/man
-	cd debian/geda-utils/usr/bin && mv gnet_hier_verilog.sh gnet_hier_verilog
-	cd debian/geda-utils/usr/bin && mv gsymfix.pl gsymfix
-	cd debian/geda-utils/usr/share/doc && mv geda-gaf/* geda-utils/
-	rmdir debian/geda-utils/usr/share/doc/geda-gaf
-
-	dh_strip -a
-	dh_compress -a -X.sch -X.sym
-	dh_fixperms -a
-	dh_installdeb -a
-#	dh_makeshlibs -a -V'$(LIBPKG) (>= $(UPSTREAM_VERSION))'
+override_dh_makeshlibs:
 	dh_makeshlibs -a -V'$(LIBPKG) (= $(DEBIAN_VERSION))'
-	dh_shlibdeps -a
-	dh_gencontrol -a
-	dh_md5sums -a
-	dh_builddeb -a
-
-binary: binary-indep binary-arch
-.PHONY: prep build clean binary-indep binary-arch binary
