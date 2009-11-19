@@ -32,7 +32,7 @@ Description: GPL EDA -- Electronics design software -- library files
 Package: libgeda-dev
 Architecture: any
 Section: libdevel
-Depends: ${misc:Depends}, ${shlibs:Depends}, libgeda-common (>= ${source:Version}), libgeda-common (<< ${source:Version}.1~), libgeda35, libgtk2.0-dev, guile-1.8-dev [!ia64], guile-1.6-dev [ia64], libgd2-xpm-dev | libgd2-dev
+Depends: ${misc:Depends}, ${shlibs:Depends}, libgeda-common (>= ${source:Version}), libgeda-common (<< ${source:Version}.1~), libgtk2.0-dev, guile-1.8-dev [!ia64], guile-1.6-dev [ia64], libgd2-xpm-dev | libgd2-dev
 Description: GPL EDA -- Electronics design software -- development files
  Library development files for GPL EDA, an electronics design package,
  including gschem, a schematic editor.
