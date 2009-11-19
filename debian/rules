@@ -69,7 +69,7 @@ override_dh_installchangelogs:
 	dh_installchangelogs utils/ChangeLog     -p geda-utils
 
 override_dh_installexamples:
-	dh_installexamples
+	dh_installexamples -XMakefile -X.in
 	# Work around install locations in geda-examples
 	cd debian/geda-examples/usr/share/doc && mv geda-gaf/examples geda-examples/
 	rmdir debian/geda-examples/usr/share/doc/geda-gaf
