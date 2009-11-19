@@ -1,0 +1,32 @@
+Description: Remove undefined `l' macro
+Author: أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>
+--- a/gnetlist/docs/gnetlist.1
++++ b/gnetlist/docs/gnetlist.1
+@@ -91,7 +91,6 @@
+ and a few examples on how to run gnetlist.
+ 
+ .SH OPTIONS
+-.l
+ \fIgnelist\fP accepts the following options:
+ .TP 8
+ .B -q
+--- a/gschem/docs/gschem.1
++++ b/gschem/docs/gschem.1
+@@ -25,7 +25,6 @@
+ line arguments and a few examples on how to run \fIgschem\fP.
+ 
+ .SH OPTIONS
+-.l
+ \fIgschem\fP accepts the following options:
+ .TP 8
+ .B -q
+--- a/gsymcheck/docs/gsymcheck.1
++++ b/gsymcheck/docs/gsymcheck.1
+@@ -32,7 +32,6 @@
+ Checks to make sure the number of pins is the correct number
+ 
+ .SH OPTIONS
+-.l
+ \fIgsymcheck\fP accepts the following options:
+ .TP 8
+ .B -q
