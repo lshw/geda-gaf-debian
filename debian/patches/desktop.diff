@@ -1,0 +1,20 @@
+Description: Remove Encoding field
+Author: أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>
+--- a/gattrib/data/geda-gattrib.desktop
++++ b/gattrib/data/geda-gattrib.desktop
+@@ -1,6 +1,5 @@
+ [Desktop Entry]
+ Version=1.0
+-Encoding=UTF-8
+ GenericName=gattrib
+ Name=gEDA Attribute Editor
+ Name[es]=Editor de Propiedades de gEDA
+--- a/gschem/data/geda-gschem.desktop
++++ b/gschem/data/geda-gschem.desktop
+@@ -1,6 +1,5 @@
+ [Desktop Entry]
+ Version=1.0
+-Encoding=UTF-8
+ GenericName=gschem
+ Name=gEDA Schematic Editor
+ Name[af]=gEDA Stroombaandiagram Bewerker
