@@ -3,6 +3,10 @@
 %:
 	dh $@
 
+override_dh_clean:
+	# gnetlist.orig is an upstream file that should not be removed:
+	dh_clean -Xgnetlist/tests/gnetlistrc.orig
+
 override_dh_auto_configure:
 	dh_auto_configure -- --with-rcdir=/etc/gEDA 				\
 	                     --disable-static               \
