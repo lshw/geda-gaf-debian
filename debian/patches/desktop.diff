@@ -1,4 +1,5 @@
 Description: Remove Encoding field
+Forwarded: Yes
 Author: أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>
 --- a/gattrib/data/geda-gattrib.desktop
 +++ b/gattrib/data/geda-gattrib.desktop
