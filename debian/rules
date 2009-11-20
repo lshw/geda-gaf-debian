@@ -73,7 +73,7 @@ override_dh_installexamples:
 	[ ! -d debian/geda-examples ] || \
 		( cd debian/geda-examples/usr/share/doc && mv geda-gaf/examples geda-examples/ && rmdir geda-gaf )
 	# In geda-symbols nc.pdf should rather be in examples dir:
-	[ ! -d debian/geda-examples ] || \
+	[ ! -d debian/geda-symbols ] || \
 		( cd debian/geda-symbols/usr/share/doc/geda-symbols && mkdir -p examples && mv nc.pdf examples/ )
 
 override_dh_compress:
