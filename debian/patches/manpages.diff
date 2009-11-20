@@ -249,3 +249,14 @@ Author: أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourcef
  
  .SH "ENVIRONMENT"
  \fIgsymcheck\fP respects the following environment variable:
+--- a/utils/man/grenum.1
++++ b/utils/man/grenum.1
+@@ -6,7 +6,7 @@
+ 
+ .SH SYNOPSIS
+ .B grenum
+-[-v\||\|\-\-version \-h\||\|\-\-help \-p\||\|\-\-pagejump]
++[\-v\||\|\-\-version \-h\||\|\-\-help \-p\||\|\-\-pagejump]
+ .I infile1.sch infile2.sch
+ \|.\|.\|.
+ 
