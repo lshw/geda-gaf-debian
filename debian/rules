@@ -70,11 +70,11 @@ override_dh_installchangelogs:
 override_dh_installexamples:
 	dh_installexamples -XMakefile -X.in
 	# Work around install locations in geda-examples
-	[ ! -d debian/geda-examples ] || ( \
-		cd debian/geda-examples/usr/share/doc && mv geda-gaf/examples geda-examples/ && rmdir geda-gaf ; \
+	[ ! -d debian/geda-examples ] || \
+		( cd debian/geda-examples/usr/share/doc && mv geda-gaf/examples geda-examples/ && rmdir geda-gaf )
 	# In geda-symbols nc.pdf should rather be in examples dir:
 	[ ! -d debian/geda-examples ] || \
-		cd debian/geda-symbols/usr/share/doc && mkdir -p debian && mv nc.pdf examples/
+		( cd debian/geda-symbols/usr/share/doc && mkdir -p debian && mv nc.pdf examples/ )
 
 override_dh_compress:
 	dh_compress -Xwiki -X.sch -Xgeda-examples/examples -X.sym
