@@ -1,6 +1,6 @@
-geda-gaf (1:1.6.0-1~18.gbpef3232) UNRELEASED; urgency=low
+geda-gaf (1:1.6.0-1~19.gbp0752af) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @ef32322d8d9c59360a92bd8f92557f6ee58fc844 **
+  ** SNAPSHOT build @0752afac552e5ecd97513f0b07fbf207812dc382 **
 
   [ Peter Clifton ]
   * gEDA 1.6.0 upstream release (Closes: #552152)
@@ -10,13 +10,12 @@ geda-gaf (1:1.6.0-1~18.gbpef3232) UNRELEASED; urgency=low
   * Bumped compat level to 7
   * debian/control:
     + Bumped Standards-Version to 3.8.3
-    + Build-Depend on 7.0.50~
     + Added ${shlib:Depends} to libgeda-dev Depends.
     + Depend on mawk instead of gawk in geda-gnetlist
     + Put geda-doc in Section: doc
     + Fix typo in geda description.
     + Add ${misc:Depends} to Depends of all packages.
-    + Build-Depend on debhelper >= 7.4.3~ for dh_installdocs --linkdoc support
+    + Build-Depend on debhelper >= 7.4.7~
     + Set Debian Electronics Team as Maintainer.
     + Add myself to Uploaders.
     + Add Vcs-* fields.
@@ -44,7 +43,7 @@ geda-gaf (1:1.6.0-1~18.gbpef3232) UNRELEASED; urgency=low
   * Added patch manpages.diff to remove undefined `l' macro.
   * Added patch desktop.diff to remove Encoding field and escape "-".
 
- -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Sat, 21 Nov 2009 09:55:48 +0200
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Sat, 21 Nov 2009 22:51:03 +0200
 
 geda-gaf (1:1.5.4-0~pcjc2.1) jaunty; urgency=low
 

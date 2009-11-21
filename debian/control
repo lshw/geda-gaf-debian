@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Debian Electronics Team <pkg-electronics-devel@lists.alioth.debian.org>
 Uploaders: Peter Clifton <pcjc2@cam.ac.uk>, أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>
 Standards-Version: 3.8.3
-Build-Depends: debhelper (>= 7.4.3~), libgtk2.0-dev, guile-1.8-dev [!ia64], guile-1.6-dev [ia64], libgd2-xpm-dev | libgd2-dev, libxml-parser-perl, gs-common, transfig, libstroke0-dev, groff, libxml-parser-perl, libglib2.0-dev, flex, intltool
+Build-Depends: debhelper (>= 7.4.7~), libgtk2.0-dev, guile-1.8-dev [!ia64], guile-1.6-dev [ia64], libgd2-xpm-dev | libgd2-dev, libxml-parser-perl, gs-common, transfig, libstroke0-dev, groff, libxml-parser-perl, libglib2.0-dev, flex, intltool
 Homepage: http://geda.seul.org/
 Vcs-Git: git://git.debian.org/git/pkg-electronics/geda-gaf.git
 Vcs-Browser: http://git.debian.org/?p=pkg-electronics/geda-gaf.git

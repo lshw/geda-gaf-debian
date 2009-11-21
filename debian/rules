@@ -16,23 +16,20 @@ override_dh_auto_configure:
 override_dh_auto_build:
 	dh_auto_build
 
-override_dh_auto_test:
-	make check
-
 LIBPKG=libgeda38
 DEVPKG=libgeda-dev
 COMMONPKG=libgeda-common
 
 override_dh_auto_install:
-	cd libgeda   && $(MAKE) install DESTDIR=$(CURDIR)/debian/tmp
-	cd gschem    && $(MAKE) install DESTDIR=$(CURDIR)/debian/geda-gschem
-	cd gattrib   && $(MAKE) install DESTDIR=$(CURDIR)/debian/geda-gattrib
-	cd gnetlist  && $(MAKE) install DESTDIR=$(CURDIR)/debian/geda-gnetlist
-	cd gsymcheck && $(MAKE) install DESTDIR=$(CURDIR)/debian/geda-gsymcheck
-	cd utils     && $(MAKE) install DESTDIR=$(CURDIR)/debian/geda-utils
-	cd symbols   && $(MAKE) install DESTDIR=$(CURDIR)/debian/geda-symbols
-	cd docs      && $(MAKE) install DESTDIR=$(CURDIR)/debian/geda-doc
-	cd examples  && $(MAKE) install DESTDIR=$(CURDIR)/debian/geda-examples
+	dh_auto_install --sourcedirectory=libgeda    -- DESTDIR=$(CURDIR)/debian/tmp
+	dh_auto_install --sourcedirectory=gschem     -- DESTDIR=$(CURDIR)/debian/geda-gschem
+	dh_auto_install --sourcedirectory=gattrib    -- DESTDIR=$(CURDIR)/debian/geda-gattrib
+	dh_auto_install --sourcedirectory=gnetlist   -- DESTDIR=$(CURDIR)/debian/geda-gnetlist
+	dh_auto_install --sourcedirectory=gsymcheck  -- DESTDIR=$(CURDIR)/debian/geda-gsymcheck
+	dh_auto_install --sourcedirectory=utils      -- DESTDIR=$(CURDIR)/debian/geda-utils
+	dh_auto_install --sourcedirectory=symbols    -- DESTDIR=$(CURDIR)/debian/geda-symbols
+	dh_auto_install --sourcedirectory=docs       -- DESTDIR=$(CURDIR)/debian/geda-doc
+	dh_auto_install --sourcedirectory=examples   -- DESTDIR=$(CURDIR)/debian/geda-examples
 
 override_dh_install:
 	dh_install
