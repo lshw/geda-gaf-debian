@@ -1,13 +1,57 @@
-geda-gaf (1:1.6.0-0~pcjc2.1) karmic; urgency=low
+geda-gaf (1:1.6.0-1~18.gbpef3232) UNRELEASED; urgency=low
 
-  * gEDA 1.6.0 upstream release
+  ** SNAPSHOT build @ef32322d8d9c59360a92bd8f92557f6ee58fc844 **
 
- -- Peter Clifton <pcjc2@cam.ac.uk>  Wed, 07 Oct 2009 19:24:27 +0100
+  [ Peter Clifton ]
+  * gEDA 1.6.0 upstream release (Closes: #552152)
+
+  [ أحمد المحمودي (Ahmed El-Mahmoudy) ]
+  * Switch to source format 3.0 (quilt).
+  * Bumped compat level to 7
+  * debian/control:
+    + Bumped Standards-Version to 3.8.3
+    + Build-Depend on 7.0.50~
+    + Added ${shlib:Depends} to libgeda-dev Depends.
+    + Depend on mawk instead of gawk in geda-gnetlist
+    + Put geda-doc in Section: doc
+    + Fix typo in geda description.
+    + Add ${misc:Depends} to Depends of all packages.
+    + Build-Depend on debhelper >= 7.4.3~ for dh_installdocs --linkdoc support
+    + Set Debian Electronics Team as Maintainer.
+    + Add myself to Uploaders.
+    + Add Vcs-* fields.
+    + Remove usr/share/doc/man/*.html from packages as they already exist as
+      manpages.
+    + Remove libgeda35 from libgeda-dev Depends.
+    + For geda-symbols, move nc.pdf to examples dir.
+    + Demote geda-doc to Recommends. (Closes: #507363)
+  * debian/rules:
+    + Simplify rules file
+    + Add -Wl,--as-needed to LDFLAGS.
+    + Remove macros since they are no longer needed.
+    + Do not override CFLAGS in build.
+    + Do not install util/ChangeLog.* in geda-utils
+    + Link documentation of geda to geda-doc
+    + override dh_clean to avoid removing gnetlist/tests/gnetlistrc.orig
+    + Exclude Makefile* and *.in when installing examples.
+  * Added debian/*.examples, debian/*.manpages, debian/watch,
+    debian/libgeda*.install, debian/geda-doc.docs, debian/libgeda38.symbols,
+    debian/geda-doc.doc-base
+  * Removed debian/*.dirs, debian/geda-gschem.postinst,
+    debian/libgeda38.postinst
+  * debian/copyright: proper copyright file.
+  * debian/geda-symbols.postrm: Set -e flag
+  * Added patch manpages.diff to remove undefined `l' macro.
+  * Added patch desktop.diff to remove Encoding field and escape "-".
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Sat, 21 Nov 2009 09:55:48 +0200
 
 geda-gaf (1:1.5.4-0~pcjc2.1) jaunty; urgency=low
 
   * gEDA 1.5.4 upstream release
-  * Initial attempt at unified debian package.
+    + Country part in translation only when needed (Closes: #336795, #336796)
+    + Remove GtkItemEntry code. Use plain GtkEntry instead. (Closes: #549735)
+  * Initial attempt at unified debian package. (Closes: #549051)
   * Based on geda-* Debian packages by Hamish Moffatt.
   * Fix dependancy of >= $UPSTREAM_VERSION to match the exact debian
     version of libgeda which was built with this source package.
