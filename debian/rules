@@ -49,11 +49,15 @@ override_dh_installdocs:
 	dh_installdocs -p$(LIBPKG) -p$(COMMONPKG) -p$(DEVPKG) --link-doc=$(COMMONPKG)
 	# Work around install location in some geda- packages:
 	for p in geda-gnetlist geda-gschem geda-gsymcheck geda-utils geda-symbols geda-doc; do \
-		[ ! -d debian/$$p ] || ( \
-			rm -rf debian/$$p/usr/share/doc/geda-gaf/man ; \
-			mv debian/$$p/usr/share/doc/geda-gaf/*  \
-	   		 debian/$$p/usr/share/doc/$$p/ ; \
-			rm -rf debian/$$p/usr/share/doc/geda-gaf ; ) \
+	  rm -rf debian/$$p/usr/share/doc/geda-gaf/man ; \
+	  [ ! -d debian/$$p/usr/share/doc/$$p ] || ( \
+	    mv debian/$$p/usr/share/doc/geda-gaf/*  \
+	       debian/$$p/usr/share/doc/$$p/ ; \
+	    [ ! -d debian/$$p/usr/share/doc/$$p/readmes ] || \
+	      mv debian/$$p/usr/share/doc/$$p/readmes/*  \
+	         debian/$$p/usr/share/doc/$$p/ ) ; \
+	  rm -rf debian/$$p/usr/share/doc/$$p/readmes; \
+	  rm -rf debian/$$p/usr/share/doc/geda-gaf ; \
 	done
 
 override_dh_installchangelogs:
@@ -73,7 +77,7 @@ override_dh_installexamples:
 	[ ! -d debian/geda-examples ] || \
 		( cd debian/geda-examples/usr/share/doc && mv geda-gaf/examples geda-examples/ && rmdir geda-gaf )
 	# In geda-symbols nc.pdf should rather be in examples dir:
-	[ ! -d debian/geda-symbols ] || \
+	[ ! -d debian/geda-symbols/usr/share/doc/geda-symbols ] || \
 		( cd debian/geda-symbols/usr/share/doc/geda-symbols && mkdir -p examples && mv nc.pdf examples/ )
 
 override_dh_compress:
