@@ -65,7 +65,7 @@ Description: Symbols for GPL EDA -- Electronics design software
 Package: geda-gschem
 Architecture: any
 Conflicts: geda (<= 19990516-1)
-Depends: ${misc:Depends}, ${shlibs:Depends}, geda-symbols (>= 1:1.5.1)
+Depends: ${misc:Depends}, ${shlibs:Depends}, geda-symbols (>= 1:1.5.1), geda-symbols (<< 1.7.0~)
 Description: GPL EDA -- Electronics design software -- schematic editor
  GPL EDA, an electronics design package, including
  gschem, a schematic editor.
@@ -75,7 +75,7 @@ Description: GPL EDA -- Electronics design software -- schematic editor
 Package: geda-gattrib
 Architecture: any
 Conflicts: geda (<= 19990516-1)
-Depends: ${misc:Depends}, ${shlibs:Depends}, geda-symbols (>= 1:1.5.1)
+Depends: ${misc:Depends}, ${shlibs:Depends}, geda-symbols (>= 1:1.5.1), geda-symbols (<< 1.7.0~)
 Description: GPL EDA -- Electronics design software -- attribute editor
  GPL EDA, an electronics design package, including
  gschem, a schematic editor.
@@ -85,7 +85,7 @@ Description: GPL EDA -- Electronics design software -- attribute editor
 Package: geda-gnetlist
 Architecture: any
 Conflicts: geda (<= 19990516-1)
-Depends: ${misc:Depends}, ${shlibs:Depends}, geda-symbols (>= 1:1.5.1), mawk
+Depends: ${misc:Depends}, ${shlibs:Depends}, geda-symbols (>= 1:1.5.1), geda-symbols (<< 1.7.0~), mawk
 Description: GPL EDA -- Electronics design software -- netlister
  GPL EDA, an electronics design package, including
  gschem, a schematic editor.
@@ -94,7 +94,7 @@ Description: GPL EDA -- Electronics design software -- netlister
 
 Package: geda-gsymcheck
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}, geda-symbols (>= 1:1.5.1)
+Depends: ${misc:Depends}, ${shlibs:Depends}, geda-symbols (>= 1:1.5.1), geda-symbols (<< 1.7.0~)
 Description: GPL EDA -- Electronics design software -- symbol checker
  GPL EDA, an electronics design package, including
  gschem, a schematic editor.
