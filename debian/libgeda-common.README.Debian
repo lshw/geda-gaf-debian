@@ -1,0 +1,7 @@
+libgeda for Debian
+==================
+
+  Note that the libgeda library does not guarantee a stable ABI or API between
+  release series, so applications built against it will need to be recompiled
+  (and possibly altered) with each new libgeda release.
+
