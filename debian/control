@@ -63,7 +63,7 @@ Description: GPL EDA -- Electronics design software (development files)
 Package: libgeda-common
 Architecture: all
 Depends: ${misc:Depends}
-Conflicts: libgeda20, libgeda29, geda-symbols (<< 1:1.2.0)
+Conflicts: libgeda20, libgeda29, libgeda33, geda-symbols (<< 1:1.2.0)
 Replaces: geda-symbols (<< 1:1.2.0)
 Description: GPL EDA -- Electronics design software (data files)
  The gEDA project has produced and continues working on a full GPL'd suite and
@@ -82,7 +82,7 @@ Description: GPL EDA -- Electronics design software (data files)
 Package: geda-symbols
 Architecture: all
 Depends: ${misc:Depends}
-Conflicts: libgeda20, libgeda29, libgeda33
+Conflicts: libgeda20, libgeda29
 Description: GPL EDA -- Electronics design software (symbols library)
  The gEDA project has produced and continues working on a full GPL'd suite and
  toolkit of Electronic Design Automation tools. These tools are used for
