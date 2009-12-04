@@ -1,6 +1,6 @@
-geda-gaf (1:1.6.0-1~22.gbpa4723a) UNRELEASED; urgency=low
+geda-gaf (1:1.6.0-1~26.gbp87c591) UNRELEASED; urgency=low
 
-  ** SNAPSHOT build @a4723ad6b51c194c604fa0d99e56f09aaf7b5f58 **
+  ** SNAPSHOT build @87c591a0d8112c83cf873c386f0ba93902e62ecb **
 
   [ Peter Clifton ]
   * gEDA 1.6.0 upstream release (Closes: #552152)
@@ -28,8 +28,14 @@ geda-gaf (1:1.6.0-1~22.gbpa4723a) UNRELEASED; urgency=low
     + Remove libgeda35 from libgeda-dev Depends.
     + For geda-symbols, move nc.pdf to examples dir.
     + Demote geda-doc to Recommends. (Closes: #507363)
-    + Add geda-symbols (<< 1.7.0~) to Depends for packages depending on
+    + Add geda-symbols (<< 1:1.7.0~) to Depends for packages depending on
       geda-symbols. (Closes: #471133)
+    + Enhanced packages' description (Closes: #479615). Credits go to Peter
+      Clifton for the suggestion.
+    + Removed libgeda33 from Conflicts of geda-symbols, as this was
+      never needed.
+    + Added libgeda33 to Conflicts of libgeda-common, since the locales are
+      now installed in libgeda-common.
   * debian/rules:
     + Simplify rules file
     + Add -Wl,--as-needed to LDFLAGS.
@@ -41,16 +47,16 @@ geda-gaf (1:1.6.0-1~22.gbpa4723a) UNRELEASED; urgency=low
     + Exclude Makefile* and *.in when installing examples.
   * Added debian/*.examples, debian/*.manpages, debian/watch,
     debian/libgeda*.install, debian/geda-doc.docs, debian/libgeda38.symbols,
-    debian/geda-doc.doc-base
+    debian/geda-doc.doc-base, debian/libgeda-common.README.Debian
   * Added debian/geda-gschem.menu (Closes: #447614)
   * Removed debian/*.dirs, debian/geda-gschem.postinst,
     debian/libgeda38.postinst
   * debian/copyright: proper copyright file.
   * debian/geda-symbols.postrm: Set -e flag
-  * Added patch manpages.diff to remove undefined `l' macro.
-  * Added patch desktop.diff to remove Encoding field and escape "-".
+  * Added patch manpages.diff to remove undefined `l' macro and escape "-".
+  * Added patch desktop.diff to remove Encoding field.
 
- -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Mon, 23 Nov 2009 09:27:22 +0200
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Fri, 04 Dec 2009 06:50:27 +0200
 
 geda-gaf (1:1.5.4-0~pcjc2.1) jaunty; urgency=low
 
