@@ -1,6 +1,4 @@
-geda-gaf (1:1.6.0-1~26.gbp87c591) UNRELEASED; urgency=low
-
-  ** SNAPSHOT build @87c591a0d8112c83cf873c386f0ba93902e62ecb **
+geda-gaf (1:1.6.0-1) unstable; urgency=low
 
   [ Peter Clifton ]
   * gEDA 1.6.0 upstream release (Closes: #552152)
