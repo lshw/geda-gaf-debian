@@ -30,6 +30,8 @@ geda-gaf (1:1.6.0-1) unstable; urgency=low
       geda-symbols. (Closes: #471133)
     + Enhanced packages' description (Closes: #479615). Credits go to Peter
       Clifton for the suggestion.
+    + Removed libgeda33 from Conflicts of geda-symbols, as this was
+      never needed.
     + Added libgeda33 to Conflicts of libgeda-common, since the locales are
       now installed in libgeda-common.
   * debian/rules:
