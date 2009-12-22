@@ -1,3 +1,11 @@
+geda-gaf (1:1.6.0-3) unstable; urgency=low
+
+  * debian/rules:
+    + Use $(CURDIR) instead of $(PWD)
+    + Remove override for dh_auto_build
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Tue, 22 Dec 2009 07:01:51 +0200
+
 geda-gaf (1:1.6.0-2) unstable; urgency=low
 
   * Set $HOME to temporary directory in the build tree while running the test
