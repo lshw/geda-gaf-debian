@@ -1,3 +1,10 @@
+geda-gaf (1:1.6.0-2) unstable; urgency=low
+
+  * Set $HOME to temporary directory in the build tree while running the test
+    suites in order to fix FTBFS on autobuilders (Closes: #561906)
+
+ -- Hamish Moffatt <hamish@debian.org>  Tue, 22 Dec 2009 09:22:08 +1100
+
 geda-gaf (1:1.6.0-1) unstable; urgency=low
 
   [ Peter Clifton ]

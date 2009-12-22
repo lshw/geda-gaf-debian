@@ -1,11 +1,14 @@
 #!/usr/bin/make -f
 
+TEST_HOME=$(PWD)/tmp-home
+
 %:
 	dh $@
 
 override_dh_clean:
 	# gnetlist.orig is an upstream file that should not be removed:
 	dh_clean -Xgnetlist/tests/gnetlistrc.orig
+	rm -rf $(TEST_HOME)
 
 override_dh_auto_configure:
 	dh_auto_configure -- --with-rcdir=/etc/gEDA 				\
@@ -15,6 +18,10 @@ override_dh_auto_configure:
 
 override_dh_auto_build:
 	dh_auto_build
+
+override_dh_auto_test:
+	mkdir -p $(TEST_HOME)
+	HOME=$(TEST_HOME) dh_auto_test
 
 LIBPKG=libgeda38
 DEVPKG=libgeda-dev
