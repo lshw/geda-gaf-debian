@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-TEST_HOME=$(PWD)/tmp-home
+TEST_HOME=$(CURDIR)/tmp-home
 
 %:
 	dh $@
@@ -15,9 +15,6 @@ override_dh_auto_configure:
 	                     --disable-static               \
 	                     --disable-update-xdg-database	\
 	                     --disable-rpath LDFLAGS="$(LDFLAGS) -Wl,--as-needed"
-
-override_dh_auto_build:
-	dh_auto_build
 
 override_dh_auto_test:
 	mkdir -p $(TEST_HOME)
