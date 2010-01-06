@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Debian Electronics Team <pkg-electronics-devel@lists.alioth.debian.org>
 Uploaders: Peter Clifton <pcjc2@cam.ac.uk>, أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>, Hamish Moffatt <hamish@debian.org>
 Standards-Version: 3.8.3
-Build-Depends: debhelper (>= 7.4.7~), libgtk2.0-dev, guile-1.8-dev [!ia64], guile-1.6-dev [ia64], libgd2-xpm-dev | libgd2-dev, libxml-parser-perl, gs-common, transfig, libstroke0-dev, groff, libxml-parser-perl, libglib2.0-dev, flex, intltool
+Build-Depends: debhelper (>= 7.4.7~), libgtk2.0-dev, guile-1.8-dev, libgd2-xpm-dev | libgd2-dev, libxml-parser-perl, gs-common, transfig, libstroke0-dev, groff, libxml-parser-perl, libglib2.0-dev, flex, intltool
 Homepage: http://geda.seul.org/
 Vcs-Git: git://git.debian.org/git/pkg-electronics/geda-gaf.git
 Vcs-Browser: http://git.debian.org/?p=pkg-electronics/geda-gaf.git
@@ -45,7 +45,7 @@ Description: GPL EDA -- Electronics design software (library files)
 Package: libgeda-dev
 Architecture: any
 Section: libdevel
-Depends: ${misc:Depends}, ${shlibs:Depends}, libgeda-common (>= ${source:Version}), libgeda-common (<< ${source:Version}.1~), libgtk2.0-dev, guile-1.8-dev [!ia64], guile-1.6-dev [ia64], libgd2-xpm-dev | libgd2-dev
+Depends: ${misc:Depends}, ${shlibs:Depends}, libgeda-common (>= ${source:Version}), libgeda-common (<< ${source:Version}.1~), libgtk2.0-dev, guile-1.8-dev, libgd2-xpm-dev | libgd2-dev
 Description: GPL EDA -- Electronics design software (development files)
  The gEDA project has produced and continues working on a full GPL'd suite and
  toolkit of Electronic Design Automation tools. These tools are used for
