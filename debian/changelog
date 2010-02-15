@@ -1,3 +1,17 @@
+geda-gaf (1:1.6.1-1) unstable; urgency=low
+
+  * New upstream release (Closes: #567585)
+  * Imported Upstream version 1.6.1
+  * Removed patch manpages.diff, as it got applied upstream.
+  * Refreshed desktop.diff patch.
+  * debian/control:
+    * Removed duplicate Build-Dep on libxml-parser-perl.
+    * Bumped Standards-Version to 3.8.4
+  * Add patch manpage_typos.diff to fix a couple of typos in gschem
+    manpage.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Mon, 15 Feb 2010 16:22:23 +0200
+
 geda-gaf (1:1.6.0-4) unstable; urgency=low
 
   * Fix incorrect guile dependency on ia64 in order to fix FTBFS on
