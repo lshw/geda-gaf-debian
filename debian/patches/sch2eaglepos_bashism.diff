@@ -1,0 +1,29 @@
+Description: Fix bashism in sch2eaglepos.sh
+ Note that even with #!/bin/bash the original code gave the error that 3 is an
+ invalid file descriptor
+Bug-Debian: http://bugs.debian.org/581098
+Forwarded: https://sourceforge.net/tracker/?func=detail&aid=2999951&group_id=161080&atid=818428
+Author: أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>
+--- a/gnetlist/scripts/sch2eaglepos.sh
++++ b/gnetlist/scripts/sch2eaglepos.sh
+@@ -43,16 +43,16 @@
+ tmpf=${tmpdir}/tmpf
+ grep -B1 refdes= "$FNAME" |sed 's/=/ /' | cut -d" " -f2,3 |grep -v '^--' >${tmpf}
+ 
+-3<$tmpf
+-while read -u 3; do
++
++while read; do
+     # the directory on the client to backup
+     X=`echo $REPLY | cut -d' ' -f1`
+     Y=`echo $REPLY | cut -d' ' -f2`
+-    read -u 3;
++    read;
+     PART="$REPLY"
+     X=`echo "scale=5; ($X - $XOFFSET) / $XSCALE" |bc`
+     Y=`echo "scale=5; ($Y - $YOFFSET) / $YSCALE" |bc`
+     echo "MOVE '$PART' ($X $Y);"
+-done
++done < $tmpf
+ rm -fr "${tmpdir}"
+ 
