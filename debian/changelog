@@ -1,3 +1,14 @@
+geda-gaf (1:1.6.1-2) unstable; urgency=low
+
+  * debian/control:
+    + Updated my email address
+    + Added DMUA after sponsors consent
+    (http://lists.alioth.debian.org/pipermail/pkg-electronics-devel/2010-April/001827.html)
+  * geda-gnetlist: added patch sch2eaglepos_bashism.diff to fix bashisms
+    in sch2eaglepos.sh (Closes: #581098).
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Wed, 12 May 2010 09:17:11 +0300
+
 geda-gaf (1:1.6.1-1) unstable; urgency=low
 
   * New upstream release (Closes: #567585)
