@@ -13,13 +13,16 @@ Author: أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>
 -3<$tmpf
 -while read -u 3; do
 +
-+while read; do
++while read rslt; do
      # the directory on the client to backup
-     X=`echo $REPLY | cut -d' ' -f1`
-     Y=`echo $REPLY | cut -d' ' -f2`
+-    X=`echo $REPLY | cut -d' ' -f1`
+-    Y=`echo $REPLY | cut -d' ' -f2`
 -    read -u 3;
-+    read;
-     PART="$REPLY"
+-    PART="$REPLY"
++    X=`echo $rslt | cut -d' ' -f1`
++    Y=`echo $rslt | cut -d' ' -f2`
++    read rslt;
++    PART="$rslt"
      X=`echo "scale=5; ($X - $XOFFSET) / $XSCALE" |bc`
      Y=`echo "scale=5; ($Y - $YOFFSET) / $YSCALE" |bc`
      echo "MOVE '$PART' ($X $Y);"
