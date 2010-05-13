@@ -1,3 +1,10 @@
+geda-gaf (1:1.6.1-3) unstable; urgency=low
+
+  * debian/patches/sch2eaglepos_bashism.diff: Fix another overlooked bashism
+    (Thanks to Dan McMahill from upstream)
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Thu, 13 May 2010 05:46:09 +0300
+
 geda-gaf (1:1.6.1-2) unstable; urgency=low
 
   * debian/control:
