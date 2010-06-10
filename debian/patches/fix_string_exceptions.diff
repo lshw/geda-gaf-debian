@@ -1,0 +1,43 @@
+Description: String exceptions have been deprecated since Python 2.5
+Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=585213
+Forwarded: https://sourceforge.net/tracker/?func=detail&aid=3014181&group_id=161080&atid=818428
+Author: أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>
+--- a/utils/scripts/garchive.py
++++ b/utils/scripts/garchive.py
+@@ -275,15 +275,15 @@
+ 
+             if Option == '-a':
+                 if self.ProgramMode == "extract":          # sanity check
+-                    raise "Incompatible command line args"
++                    raise SyntaxError("Incompatible command line args")
+ 
+             if Option == '-e':
+                 if self.ProgramMode == "archive":          # sanity check
+-                    raise "Incompatible command line args"
++                    raise SyntaxError("Incompatible command line args")
+ 
+             if Option == '-f':
+                 if self.ProgramMode == "extract":          # sanity check
+-                    raise "Incompatible command line args"
++                    raise SyntaxError("Incompatible command line args")
+                 try:
+                     os.stat(Value)
+                 except OSError:
+@@ -294,7 +294,7 @@
+ 
+             if Option == '-o':
+                 if self.ProgramMode == "extract":          # sanity check
+-                    raise "incompatible command line args"
++                    raise SyntaxError("Incompatible command line args")
+                 if CheckFilename(Value):
+                     self.OutputFileName = Value            #strcopy?
+                 else:
+@@ -904,7 +904,7 @@
+     Extract(Args)
+     sys.exit(0)
+ else:
+-    raise "Unknown program mode found."
++    raise RuntimeError("Unknown program mode found.")
+ 
+ #  That's it -- very simple!!
+ 
