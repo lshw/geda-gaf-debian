@@ -63,7 +63,8 @@ Description: GPL EDA -- Electronics design software (development files)
 Package: libgeda-common
 Architecture: all
 Depends: ${misc:Depends}
-Conflicts: libgeda20, libgeda29, libgeda33, geda-symbols (<< 1:1.2.0)
+Conflicts: libgeda20, libgeda29, libgeda33
+Breaks: geda-symbols (<< 1:1.2.0)
 Replaces: geda-symbols (<< 1:1.2.0)
 Description: GPL EDA -- Electronics design software (data files)
  The gEDA project has produced and continues working on a full GPL'd suite and
@@ -97,7 +98,7 @@ Description: GPL EDA -- Electronics design software (symbols library)
 
 Package: geda-gschem
 Architecture: any
-Conflicts: geda (<= 19990516-1)
+Breaks: geda (<= 19990516-1)
 Depends: ${misc:Depends}, ${shlibs:Depends}, geda-symbols (>= 1:1.5.1), geda-symbols (<< 1:1.7.0~)
 Description: GPL EDA -- Electronics design software (schematic editor)
  The gEDA project has produced and continues working on a full GPL'd suite and
@@ -113,7 +114,7 @@ Description: GPL EDA -- Electronics design software (schematic editor)
 
 Package: geda-gattrib
 Architecture: any
-Conflicts: geda (<= 19990516-1)
+Breaks: geda (<= 19990516-1)
 Depends: ${misc:Depends}, ${shlibs:Depends}, geda-symbols (>= 1:1.5.1), geda-symbols (<< 1:1.7.0~)
 Description: GPL EDA -- Electronics design software (attribute editor)
  The gEDA project has produced and continues working on a full GPL'd suite and
@@ -129,7 +130,7 @@ Description: GPL EDA -- Electronics design software (attribute editor)
 
 Package: geda-gnetlist
 Architecture: any
-Conflicts: geda (<= 19990516-1)
+Breaks: geda (<= 19990516-1)
 Depends: ${misc:Depends}, ${shlibs:Depends}, geda-symbols (>= 1:1.5.1), geda-symbols (<< 1:1.7.0~), mawk
 Description: GPL EDA -- Electronics design software (netlister)
  The gEDA project has produced and continues working on a full GPL'd suite and
@@ -160,7 +161,7 @@ Description: GPL EDA -- Electronics design software (symbol checker)
 
 Package: geda-utils
 Architecture: any
-Conflicts: geda (<= 19990516-1)
+Breaks: geda (<= 19990516-1)
 Depends: ${misc:Depends}, ${shlibs:Depends}, python
 Description: GPL EDA -- Electronics design software (utilities)
  The gEDA project has produced and continues working on a full GPL'd suite and
