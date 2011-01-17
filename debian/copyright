@@ -3,7 +3,7 @@ Name: geda-gaf
 Maintainer: Ales Hvezda and gEDA Contributors <geda-dev@geda.seul.org>
 Source: http://geda.seul.org
 
-Copyright: 1998-2009, Ales Hvezda and gEDA Contributors <geda-dev@geda.seul.org> (see changelog for details)
+Copyright: 1998-2010, Ales Hvezda and gEDA Contributors <geda-dev@geda.seul.org> (see changelog for details)
 License: GPL-2+
 
 On Debian systems, the complete text of the GNU GPL2 licenses
