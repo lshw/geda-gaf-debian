@@ -1,3 +1,10 @@
+geda-gaf (1:1.6.1-5) unstable; urgency=low
+
+  * Added disable_gnetlist-arg.diff patch, to fix arbitrary code execution.
+    (LP: #700194)
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Mon, 24 Jan 2011 19:58:01 +0200
+
 geda-gaf (1:1.6.1-4) unstable; urgency=low
 
   * Added fix_string_exceptions.diff patch to fix string exceptions in
