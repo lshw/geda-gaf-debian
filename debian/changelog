@@ -1,3 +1,19 @@
+geda-gaf (1:1.6.2-1) experimental; urgency=low
+
+  * New upstream release.
+  * Upload to experimental to avoid poisoning freeze exception for 1.6.1-5
+  * debian/watch: Updated watch file.
+  * Removed sch2eaglepos_bashism.diff and fix_string_exceptions.diff patches,
+    as they got applied upstream.
+  * debian/libgeda38.symbols: Added new symbols
+  * debian/control:
+    + Bumped Standards-Version to 3.9.1
+    + Use Breaks instead of Conflicts for geda-symbols (<< 1:1.2.0) and
+      geda (<= 19990516-1)
+  * debian/copyright: Updated copyright years
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Wed, 26 Jan 2011 07:51:03 +0200
+
 geda-gaf (1:1.6.1-5) unstable; urgency=low
 
   * Added disable_gnetlist-arg.diff patch, to fix arbitrary code execution.
