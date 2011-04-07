@@ -1,3 +1,10 @@
+geda-gaf (1:1.6.2-2) unstable; urgency=low
+
+  * Upload to unstable.
+  * debian/libgeda-dev.install: Do not install .la file (Closes: #620729)
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Thu, 07 Apr 2011 05:52:40 +0200
+
 geda-gaf (1:1.6.2-1) experimental; urgency=low
 
   * New upstream release.
