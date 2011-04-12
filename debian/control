@@ -13,7 +13,7 @@ Vcs-Browser: http://git.debian.org/?p=pkg-electronics/geda-gaf.git
 Package: geda
 Architecture: all
 Depends: ${misc:Depends}, geda-gschem, geda-gnetlist
-Recommends: geda-gsymcheck, geda-gattrib, geda-doc, extra-xdg-menus
+Recommends: geda-gsymcheck, geda-gattrib, geda-doc
 Suggests: geda-utils, geda-examples, gerbv, pcb
 Description: GPL EDA -- Electronics design software (metapackage)
  The gEDA project has produced and continues working on a full GPL'd suite and
@@ -100,6 +100,7 @@ Package: geda-gschem
 Architecture: any
 Breaks: geda (<= 19990516-1)
 Depends: ${misc:Depends}, ${shlibs:Depends}, geda-symbols (>= 1:1.5.1), geda-symbols (<< 1:1.7.0~)
+Recommends: extra-xdg-menus
 Description: GPL EDA -- Electronics design software (schematic editor)
  The gEDA project has produced and continues working on a full GPL'd suite and
  toolkit of Electronic Design Automation tools. These tools are used for
@@ -116,6 +117,7 @@ Package: geda-gattrib
 Architecture: any
 Breaks: geda (<= 19990516-1)
 Depends: ${misc:Depends}, ${shlibs:Depends}, geda-symbols (>= 1:1.5.1), geda-symbols (<< 1:1.7.0~)
+Recommends: extra-xdg-menus
 Description: GPL EDA -- Electronics design software (attribute editor)
  The gEDA project has produced and continues working on a full GPL'd suite and
  toolkit of Electronic Design Automation tools. These tools are used for
