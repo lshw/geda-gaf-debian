@@ -164,7 +164,7 @@ Description: GPL EDA -- Electronics design software (symbol checker)
 Package: geda-utils
 Architecture: any
 Breaks: geda (<= 19990516-1)
-Depends: ${misc:Depends}, ${shlibs:Depends}, python
+Depends: ${misc:Depends}, ${shlibs:Depends}, python, gawk
 Description: GPL EDA -- Electronics design software (utilities)
  The gEDA project has produced and continues working on a full GPL'd suite and
  toolkit of Electronic Design Automation tools. These tools are used for
