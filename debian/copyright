@@ -3,7 +3,8 @@ Upstream-Name: geda-gaf
 Upstream-Contact: Ales Hvezda and gEDA Contributors <geda-dev@geda.seul.org>
 Source: http://geda.seul.org
 
-Copyright: 1998-2010, Ales Hvezda and gEDA Contributors <geda-dev@geda.seul.org> (see changelog for details)
+Files: *
+Copyright: 1998-2010 Ales Hvezda and gEDA Contributors <geda-dev@geda.seul.org> (see changelog for details)
 License: GPL-2+
 
 Files: debian/*
