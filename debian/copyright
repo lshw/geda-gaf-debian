@@ -1,32 +1,32 @@
-Format-Specification: http://dep.debian.net/deps/dep5/
-Name: geda-gaf
-Maintainer: Ales Hvezda and gEDA Contributors <geda-dev@geda.seul.org>
+Format: http://anonscm.debian.org/viewvc/dep/web/deps/dep5.mdwn?view=co&pathrev=174
+Upstream-Name: geda-gaf
+Upstream-Contact: Ales Hvezda and gEDA Contributors <geda-dev@geda.seul.org>
 Source: http://geda.seul.org
 
 Copyright: 1998-2010, Ales Hvezda and gEDA Contributors <geda-dev@geda.seul.org> (see changelog for details)
 License: GPL-2+
 
-On Debian systems, the complete text of the GNU GPL2 licenses
-can be found at `/usr/share/common-licenses/GPL-2'.
-
 Files: debian/*
 Copyright: 1998-2009, Hamish Moffatt <hamish@debian.org>
-           2009, Peter Clifton <pcjc2@cam.ac.uk>
-           2009, أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users@users.sourceforge.net>
+           2009-2010, Peter Clifton <pcjc2@cam.ac.uk>
+           2009-2011, أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>
 License: GPL-2+
 
 License: GPL-2+
-    This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation; either version 2 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301,
-    USA.
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301,
+ USA.
+ .
+ On Debian systems, the full text of the GNU General Public License
+ version 2 can be found in the file `/usr/share/common-licenses/GPL-2'.
