@@ -1,1 +1,1 @@
-usr/lib/libgeda.so.*
+usr/lib/*/libgeda.so.*
