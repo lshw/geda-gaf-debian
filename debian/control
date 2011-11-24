@@ -31,6 +31,8 @@ Description: GPL EDA -- Electronics design software (metapackage)
 Package: libgeda38
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}, libgeda-common (>= ${source:Version}), libgeda-common (<< ${source:Version}.1~)
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
 Description: GPL EDA -- Electronics design software (library files)
  The gEDA project has produced and continues working on a full GPL'd suite and
  toolkit of Electronic Design Automation tools. These tools are used for
@@ -46,7 +48,7 @@ Description: GPL EDA -- Electronics design software (library files)
 Package: libgeda-dev
 Architecture: any
 Section: libdevel
-Depends: ${misc:Depends}, ${shlibs:Depends}, libgeda-common (>= ${source:Version}), libgeda-common (<< ${source:Version}.1~), libgtk2.0-dev, guile-1.8-dev, libgd2-xpm-dev | libgd2-dev
+Depends: ${misc:Depends}, ${shlibs:Depends}, libgeda38 (= ${binary:Version}), libgtk2.0-dev, guile-1.8-dev, libgd2-xpm-dev | libgd2-dev
 Description: GPL EDA -- Electronics design software (development files)
  The gEDA project has produced and continues working on a full GPL'd suite and
  toolkit of Electronic Design Automation tools. These tools are used for
@@ -66,6 +68,7 @@ Depends: ${misc:Depends}
 Conflicts: libgeda20, libgeda29, libgeda33
 Breaks: geda-symbols (<< 1:1.2.0)
 Replaces: geda-symbols (<< 1:1.2.0)
+Multi-Arch: foreign
 Description: GPL EDA -- Electronics design software (data files)
  The gEDA project has produced and continues working on a full GPL'd suite and
  toolkit of Electronic Design Automation tools. These tools are used for
