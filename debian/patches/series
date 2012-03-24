@@ -1,3 +1,4 @@
+glib-single-include.patch
 desktop.diff
 manpage_typos.diff
 format-security.diff
