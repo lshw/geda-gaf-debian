@@ -1,3 +1,27 @@
+geda-gaf (1:1.6.2-3) unstable; urgency=low
+
+  * Move recommends for extra-xdg-menus to geda-gschem & geda-gattrib
+    (Closes: #622329)
+  * Added gawk to geda-utils Depends field.
+    Thanks to Adrian Bunk <bunk@stusta.de> (Closes: #647177)
+  * Updated copyright format.
+    Thanks to Daniel T Chen <seven.steps@gmail.com>
+  * debian/control:
+    + Bumped Standards-Version to 3.9.2
+    + Build-Depend on ghostscript, not gs-common. (Closes: #649704)
+    + Replace libgeda-common in libgeda-dev dependencies with libgeda38
+    + Multiarch support:
+      - Mark libgeda38 as Multi-Arch: same
+      - Mark libgeda-common as Multi-Arch: foreign
+      - Add Pre-Depends: ${misc:Pre-Depends} for libgeda38
+  * Bumped compat level to 9
+    + debian/libgeda38.install, debian/libgeda-dev.install: Install libraries
+      from multiarch paths
+  * Added format-security.diff patch to fix possible format security problems
+    when displaying 'message' string
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Thu, 24 Nov 2011 19:50:49 +0200
+
 geda-gaf (1:1.6.2-2) unstable; urgency=low
 
   * Upload to unstable.
