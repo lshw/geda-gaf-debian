@@ -1,3 +1,13 @@
+geda-gaf (1:1.6.2-4) unstable; urgency=low
+
+  * Added glib-single-include.patch: Do not include individual glib headers
+    (Closes: #665528)
+  * debian/control:
+    + Bumped Standards-Version to 3.9.3
+    + Bumped Build-Dep on debhelper to >= 9
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Tue, 02 Oct 2012 13:07:10 +0200
+
 geda-gaf (1:1.6.2-3) unstable; urgency=low
 
   * Move recommends for extra-xdg-menus to geda-gschem & geda-gattrib
