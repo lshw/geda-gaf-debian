@@ -20,7 +20,7 @@ override_dh_auto_test:
 	mkdir -p $(TEST_HOME)
 	HOME=$(TEST_HOME) dh_auto_test
 
-LIBPKG=libgeda38
+LIBPKG=libgeda41
 DEVPKG=libgeda-dev
 COMMONPKG=libgeda-common
 
