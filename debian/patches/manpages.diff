@@ -1,8 +1,9 @@
 Description: Various manpage fixes
  * Fix typo in gxyrs manpage
- * Fix whatis entry in gmk_sym
+ * Fix whatis entry in gmk_sym manpage
  * Fix hyphens
-Forwarded: https://sourceforge.net/tracker/?func=detail&aid=2952092&group_id=161080&atid=818428
+Bug: https://bugs.launchpad.net/geda/+bug/1081303
+Forwarded: https://bugs.launchpad.net/geda/+bug/1081303/+attachment/3439824/+files/manpages.diff
 Author: أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>
 --- a/utils/docs/garchive.1
 +++ b/utils/docs/garchive.1
