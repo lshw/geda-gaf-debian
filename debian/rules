@@ -35,14 +35,6 @@ override_dh_auto_install:
 	dh_auto_install --sourcedirectory=docs       -- DESTDIR=$(CURDIR)/debian/geda-doc
 	dh_auto_install --sourcedirectory=examples   -- DESTDIR=$(CURDIR)/debian/geda-examples
 
-override_dh_install:
-	dh_install
-	# This script is already installed in examples dir:
-	rm debian/geda-gnetlist/usr/bin/sch2eaglepos.sh
-
-	# Work around install locations in geda-utils
-	cd debian/geda-utils/usr/bin && mv gnet_hier_verilog.sh gnet_hier_verilog
-
 override_dh_installdocs:
 	dh_installdocs -N$(LIBPKG) -N$(COMMONPKG) -N$(DEVPKG) -Ngeda -Ngeda-doc
 	dh_installdocs -pgeda -pgeda-doc --link-doc=geda-doc
