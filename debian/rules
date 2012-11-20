@@ -40,7 +40,7 @@ override_dh_installdocs:
 	dh_installdocs -pgeda -pgeda-doc --link-doc=geda-doc
 	dh_installdocs -p$(LIBPKG) -p$(COMMONPKG) -p$(DEVPKG) --link-doc=$(COMMONPKG)
 	# Work around install location in some geda- packages:
-	for p in geda-gnetlist geda-gschem geda-gsymcheck geda-utils geda-symbols geda-doc; do \
+	for p in geda-gnetlist geda-gschem geda-gsymcheck geda-utils geda-symbols geda-doc geda-gattrib; do \
 	  rm -rf debian/$$p/usr/share/doc/geda-gaf/man ; \
 	  [ ! -d debian/$$p/usr/share/doc/$$p ] || ( \
 	    mv debian/$$p/usr/share/doc/geda-gaf/*  \
