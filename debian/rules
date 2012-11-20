@@ -42,7 +42,6 @@ override_dh_install:
 
 	# Work around install locations in geda-utils
 	cd debian/geda-utils/usr/bin && mv gnet_hier_verilog.sh gnet_hier_verilog
-	cd debian/geda-utils/usr/bin && mv gsymfix.pl gsymfix
 
 override_dh_installdocs:
 	dh_installdocs -N$(LIBPKG) -N$(COMMONPKG) -N$(DEVPKG) -Ngeda -Ngeda-doc
