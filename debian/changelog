@@ -1,3 +1,31 @@
+geda-gaf (1:1.8.0-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #169746, #323981, #499711, #693246,
+    LP: #876299)
+  * Updated watch file
+  * debian/control:
+    + Bumped B-D on libgtk2.0-dev to (>= 2.16.0)
+    + Bumped Guile to 2.0 in Build-Dep & libgeda-dev Depends
+    + Moved mawk dependency from geda-gnetlist to geda-utils, since sw2asc
+      moved there.
+    + Bumped dependencies to:
+      geda-symbols (>= 1:1.7.1), geda-symbols (<< 1:1.9.0~)
+  * Updated debian/*.docs files
+  * Removed debian/geda-examples.docs
+  * Removed all patches, they got applied upstream.
+  * debian/rules:
+    + Removed line renaming gsymfix, it is renamed upstream
+    + Remove override for dh_install, build system behaves sanely.
+    + Add geda-gattrib to list of packages for which to remove
+      /usr/share/doc/geda-gaf/man/
+  * Removed debian/*.manpages, upstream build system already installs manpages
+  * Renamed libgeda38 to libgeda41
+  * Updated symbols file.
+  * Add manpages.diff patch for various manpage fixes.
+  * Remove useless debian/README.debian
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Tue, 20 Nov 2012 22:04:38 +0200
+
 geda-gaf (1:1.6.2-4) unstable; urgency=low
 
   * Added glib-single-include.patch: Do not include individual glib headers
