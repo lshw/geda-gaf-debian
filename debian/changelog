@@ -10,6 +10,10 @@ geda-gaf (1:1.8.0-1) unstable; urgency=low
       moved there.
     + Bumped dependencies to:
       geda-symbols (>= 1:1.7.1), geda-symbols (<< 1:1.9.0~)
+    + set "Depends: geda-doc" from Recommends since its documents (including
+      copyright file) is linked to geda-doc. It fixes "geda: copyright file
+      missing after upgrade (policy 12.5) " (Closes: #694015)
+      Thanks: Hideki Yamane <henrich@debian.or.jp>
   * Updated debian/*.docs files
   * Removed debian/geda-examples.docs
   * Removed all patches, they got applied upstream.
@@ -24,7 +28,7 @@ geda-gaf (1:1.8.0-1) unstable; urgency=low
   * Add manpages.diff patch for various manpage fixes.
   * Remove useless debian/README.debian
 
- -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Tue, 20 Nov 2012 22:04:38 +0200
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Sun, 25 Nov 2012 16:48:10 +0200
 
 geda-gaf (1:1.6.2-4) unstable; urgency=low
 
