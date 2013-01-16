@@ -7,8 +7,8 @@ Standards-Version: 3.9.4
 Build-Depends: debhelper (>= 9), libgtk2.0-dev (>= 2.16.0), guile-2.0-dev, libgd2-xpm-dev | libgd2-dev, libxml-parser-perl, ghostscript, transfig, libstroke0-dev, groff, libglib2.0-dev, flex, intltool
 DM-Upload-Allowed: yes
 Homepage: http://geda.seul.org/
-Vcs-Git: git://git.debian.org/git/pkg-electronics/geda-gaf.git
-Vcs-Browser: http://git.debian.org/?p=pkg-electronics/geda-gaf.git
+Vcs-Git: git://anonscm.debian.org/pkg-electronics/geda-gaf.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-electronics/geda-gaf.git
 
 Package: geda
 Architecture: all
