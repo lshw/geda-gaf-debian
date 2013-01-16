@@ -1,16 +1,16 @@
-Format: http://anonscm.debian.org/viewvc/dep/web/deps/dep5.mdwn?view=co&pathrev=174
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: geda-gaf
 Upstream-Contact: Ales Hvezda and gEDA Contributors <geda-dev@geda.seul.org>
 Source: http://geda.seul.org
 
 Files: *
-Copyright: 1998-2010 Ales Hvezda and gEDA Contributors <geda-dev@geda.seul.org> (see changelog for details)
+Copyright: 1998-2012 Ales Hvezda and gEDA Contributors <geda-dev@geda.seul.org> (see changelog for details)
 License: GPL-2+
 
 Files: debian/*
 Copyright: 1998-2009, Hamish Moffatt <hamish@debian.org>
            2009-2010, Peter Clifton <pcjc2@cam.ac.uk>
-           2009-2011, أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>
+           2009-2013, أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>
 License: GPL-2+
 
 License: GPL-2+
