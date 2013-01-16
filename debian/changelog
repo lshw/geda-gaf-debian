@@ -1,3 +1,10 @@
+geda-gaf (1:1.8.1-1) UNRELEASED; urgency=low
+
+  * new upstream version
+  * Add myself to Uploaders.
+
+ -- Bdale Garbee <bdale@gag.com>  Tue, 15 Jan 2013 20:56:30 -0700
+
 geda-gaf (1:1.8.0-1) unstable; urgency=low
 
   * New upstream release. (Closes: #169746, #323981, #499711, #693246,
