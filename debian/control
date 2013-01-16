@@ -5,7 +5,6 @@ Maintainer: Debian Electronics Team <pkg-electronics-devel@lists.alioth.debian.o
 Uploaders: Peter Clifton <pcjc2@cam.ac.uk>, أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>, Hamish Moffatt <hamish@debian.org>, Bdale Garbee <bdale@gag.com>
 Standards-Version: 3.9.4
 Build-Depends: debhelper (>= 9), libgtk2.0-dev (>= 2.16.0), guile-2.0-dev, libgd2-xpm-dev | libgd2-dev, libxml-parser-perl, ghostscript, transfig, libstroke0-dev, groff, libglib2.0-dev, flex, intltool
-DM-Upload-Allowed: yes
 Homepage: http://geda.seul.org/
 Vcs-Git: git://anonscm.debian.org/pkg-electronics/geda-gaf.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-electronics/geda-gaf.git
