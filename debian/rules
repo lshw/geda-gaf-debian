@@ -3,7 +3,7 @@
 TEST_HOME=$(CURDIR)/tmp-home
 
 %:
-	dh $@
+	dh $@ --with autotools_dev
 
 override_dh_clean:
 	# gnetlist.orig is an upstream file that should not be removed:
