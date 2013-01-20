@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set -e
+
+# Replace documentation directory with symlink
+docdir=/usr/share/doc/geda
+target=geda-doc
+
+if [ -d $docdir ] && [ ! -L $docdir ]; then
+       if rmdir $docdir 2>/dev/null; then
+               ln -sf $target $docdir
+       fi
+fi
+
+#DEBHELPER#
+
+exit 0
