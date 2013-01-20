@@ -1,3 +1,10 @@
+geda-gaf (1:1.8.1-2) unstable; urgency=low
+
+  * Manually replace directory with symlink in geda.postinst (Closes: #694015)
+    Thanks: gregor herrmann <gregoa@debian.org>
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Sun, 20 Jan 2013 22:49:12 +0200
+
 geda-gaf (1:1.8.1-1) unstable; urgency=low
 
   [ Bdale Garbee ]
