@@ -1,4 +1,5 @@
 libgeda.so.42 libgeda42 #MINVER#
+* Build-Depends-Package: libgeda-dev
  PAPERSIZEtoWORLD@Base 1.6.0
  active_pages@Base 1:1.8.0
  arc_info@Base 1:1.8.0
