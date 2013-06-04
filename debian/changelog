@@ -1,3 +1,12 @@
+geda-gaf (1:1.8.1-3) unstable; urgency=low
+
+  * debian/control:
+    + Drop libgd2-xpm-dev from (Build-)Deps
+    + Update (Build-)Depends from libgd2-dev to libgd-dev
+  * debian/rules: Install changelogs to libgedaNN
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@sabily.org>  Tue, 04 Jun 2013 09:42:40 +0200
+
 geda-gaf (1:1.8.1-2) unstable; urgency=low
 
   * Manually replace directory with symlink in geda.postinst (Closes: #694015)
