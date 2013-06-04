@@ -53,7 +53,7 @@ override_dh_installdocs:
 	done
 
 override_dh_installchangelogs:
-	dh_installchangelogs libgeda/ChangeLog   -p $(COMMONPKG)
+	dh_installchangelogs libgeda/ChangeLog   -p $(COMMONPKG) -p $(LIBPKG)
 	dh_installchangelogs symbols/ChangeLog   -p geda-symbols
 	dh_installchangelogs docs/ChangeLog      -p geda-doc
 	dh_installchangelogs examples/ChangeLog  -p geda-examples
