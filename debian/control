@@ -29,6 +29,7 @@ Description: GPL EDA -- Electronics design software (metapackage)
 
 Package: libgeda42
 Architecture: any
+Section: libs
 Depends: ${misc:Depends}, ${shlibs:Depends}, libgeda-common (>= ${source:Version}), libgeda-common (<< ${source:Version}.1~)
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
