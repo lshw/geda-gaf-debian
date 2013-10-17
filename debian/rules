@@ -1,5 +1,6 @@
 #!/usr/bin/make -f
 
+DEB_BUILD_ARCH=$(shell dpkg-architecture -qDEB_BUILD_ARCH)
 TEST_HOME=$(CURDIR)/tmp-home
 
 %:
@@ -17,8 +18,12 @@ override_dh_auto_configure:
 	                     --disable-rpath LDFLAGS="$(LDFLAGS) -Wl,--as-needed"
 
 override_dh_auto_test:
+ifneq (${DEB_BUILD_ARCH},armel)
+  ifneq (${DEB_BUILD_ARCH},armhf)
 	mkdir -p $(TEST_HOME)
 	HOME=$(TEST_HOME) dh_auto_test
+  endif
+endif
 
 LIBPKG=libgeda42
 DEVPKG=libgeda-dev

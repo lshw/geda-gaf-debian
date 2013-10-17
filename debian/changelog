@@ -1,3 +1,10 @@
+geda-gaf (1:1.8.2-2) unstable; urgency=low
+
+  * don't run the test suite on armel|armhf, as it seems to cause a make
+    recursion explosion on those architectures for some reason.
+
+ -- Bdale Garbee <bdale@gag.com>  Thu, 17 Oct 2013 17:14:18 -0600
+
 geda-gaf (1:1.8.2-1) unstable; urgency=low
 
   [ Bdale Garbee ]
