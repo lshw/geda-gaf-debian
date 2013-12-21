@@ -1,2 +1,4 @@
 version=3
-http://ftp.geda-project.org/geda-gaf/stable/v([\d\.]+)/([\d\.]+)/geda-gaf-([\d\.]+)\.tar\.gz
+
+opts=pgpsigurlmangle=s/$/.asc/ \
+  http://ftp.geda-project.org/geda-gaf/stable/v([\d\.]+)/([\d\.]+)/geda-gaf-([\d\.]+)\.tar\.gz
