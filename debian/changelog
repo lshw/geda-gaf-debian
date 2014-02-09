@@ -1,3 +1,10 @@
+geda-gaf (1:1.8.2-2) UNRELEASED; urgency=low
+
+  * guile-1.8-dev will be removed from unstable soon, so remove it as an
+    option from build-deps
+
+ -- Bdale Garbee <bdale@gag.com>  Sat, 08 Feb 2014 22:25:29 -0700
+
 geda-gaf (1:1.8.2-2) unstable; urgency=low
 
   * don't run the test suite on armel|armhf, as it seems to cause a make
