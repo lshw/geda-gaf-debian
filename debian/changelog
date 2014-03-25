@@ -2,8 +2,10 @@ geda-gaf (1:1.8.2-3) unstable; urgency=low
 
   * guile-1.8-dev will be removed from unstable soon, so remove it as an
     option from build-deps
+  * patch from Adam Conrad, using dh_autoreconf seems to resolve the fork
+    bombing problem, closes: #724922, 726408
 
- -- Bdale Garbee <bdale@gag.com>  Sat, 08 Feb 2014 22:25:29 -0700
+ -- Bdale Garbee <bdale@gag.com>  Mon, 24 Mar 2014 22:05:04 -0600
 
 geda-gaf (1:1.8.2-2) unstable; urgency=low
 
