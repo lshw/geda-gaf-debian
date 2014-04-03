@@ -1,3 +1,9 @@
+geda-gaf (1:1.8.2-4) UNRELEASED; urgency=low
+
+  * patch from upstream to fix warnings for components with no refdes
+
+ -- Bdale Garbee <bdale@gag.com>  Thu, 03 Apr 2014 11:13:50 -0600
+
 geda-gaf (1:1.8.2-3) unstable; urgency=low
 
   * guile-1.8-dev will be removed from unstable soon, so remove it as an
