@@ -1,3 +1,6 @@
+Note .. this patch back-ported by Bdale, thus is *not* identical to the 
+referenced git commit.
+
 From 16535799b3970540a4bf215c61791ec2bd70313d Mon Sep 17 00:00:00 2001
 From: Patrick Bernaud <patrickb@chez.com>
 Date: Fri, 07 Mar 2014 20:43:58 +0000
@@ -13,24 +16,22 @@ refdes.
 Affects-bug: lp-1288906
 ---
 diff --git a/gnetlist/src/s_traverse.c b/gnetlist/src/s_traverse.c
-index eb4cefb..0e0e5eb 100644
+index 2f6728c..bf94fdc 100644
 --- a/gnetlist/src/s_traverse.c
 +++ b/gnetlist/src/s_traverse.c
-@@ -152,7 +152,6 @@ s_traverse_sheet (TOPLEVEL * pr_current, const GList *obj_list, char *hierarchy_
+@@ -155,7 +155,6 @@ s_traverse_sheet (TOPLEVEL * pr_current, const GList *obj_list, char *hierarchy_
    char *temp;
    SCM scm_uref;
    char *temp_uref;
 -  gboolean is_graphical=FALSE;
-   gboolean is_hierarchy = TRUE;
    const GList *iter;
-   GError *err = NULL;
-@@ -179,6 +178,7 @@ s_traverse_sheet (TOPLEVEL * pr_current, const GList *obj_list, char *hierarchy_
+ 
+   if (verbose_mode) {
+@@ -172,6 +171,7 @@ s_traverse_sheet (TOPLEVEL * pr_current, const GList *obj_list, char *hierarchy_
      }
  
      if (o_current->type == OBJ_COMPLEX) {
-+      gboolean is_graphical = FALSE;
++      gboolean is_graphical=FALSE;
  
  #if DEBUG
        printf("starting NEW component\n\n");
---
-cgit v0.9
