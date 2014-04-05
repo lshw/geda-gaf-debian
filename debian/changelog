@@ -1,10 +1,10 @@
-geda-gaf (1:1.8.2-4) UNRELEASED; urgency=low
+geda-gaf (1:1.8.2-4) unstable; urgency=low
 
   * patch from upstream to fix warnings for components with no refdes
   * add replaces to handle sw2asc move from geda-gnetlist to geda-utils,
     closes: #743658
 
- -- Bdale Garbee <bdale@gag.com>  Thu, 03 Apr 2014 11:13:50 -0600
+ -- Bdale Garbee <bdale@gag.com>  Sat, 05 Apr 2014 17:51:57 -0600
 
 geda-gaf (1:1.8.2-3) unstable; urgency=low
 
