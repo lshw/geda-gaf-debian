@@ -1,3 +1,13 @@
+geda-gaf (1:1.8.2-5) unstable; urgency=medium
+
+  * Update my email address.
+  * Add bashims.diff patch to fix bashisms in some example scripts.
+    (Closes: #772246)
+  * debian/copyright: Update copyright years.
+  * debian/control: Bumped Standards-Version to 3.9.6
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Sun, 07 Dec 2014 13:42:01 +0200
+
 geda-gaf (1:1.8.2-4) unstable; urgency=low
 
   * patch from upstream to fix warnings for components with no refdes
