@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 geda-gaf (1:1.8.2-6) unstable; urgency=high
 
+  [ Bdale Garbee ]
   * change -dev dependency on -common to source, not binary, so binNMU doesn't
     render libgeda-dev uninstallable, closes: #856519
 
- -- Bdale Garbee <bdale@gag.com>  Sat, 11 Mar 2017 12:38:21 -0700
+  [ Dima Kogan ]
+  * No-op upload to fix a broken binNMU. Currently geda-gaf binNMUs
+    don't work because of #747141. (Closes: #856519)
+
+ -- Dima Kogan <dkogan@debian.org>  Sun, 12 Mar 2017 13:11:32 -0700
 
 geda-gaf (1:1.8.2-5) unstable; urgency=medium
 
