@@ -2,7 +2,7 @@ Source: geda-gaf
 Section: electronics
 Priority: optional
 Maintainer: Debian Electronics Team <pkg-electronics-devel@lists.alioth.debian.org>
-Uploaders: Peter Clifton <pcjc2@cam.ac.uk>, أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>, Hamish Moffatt <hamish@debian.org>, Bdale Garbee <bdale@gag.com>
+Uploaders: Peter Clifton <pcjc2@cam.ac.uk>, أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>, Bdale Garbee <bdale@gag.com>
 Standards-Version: 4.1.3
 Build-Depends: debhelper (>= 9), libgtk2.0-dev (>= 2.16.0), guile-2.0-dev, libgd-dev, libxml-parser-perl, ghostscript, transfig, libstroke0-dev, groff, libglib2.0-dev, flex, intltool, dh-autoreconf
 Homepage: http://www.geda-project.org/
