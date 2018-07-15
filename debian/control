@@ -48,7 +48,7 @@ Description: GPL EDA -- Electronics design software (library files)
 Package: libgeda-dev
 Architecture: any
 Section: libdevel
-Depends: ${misc:Depends}, ${shlibs:Depends}, libgeda42 (= ${source:Version}), libgtk2.0-dev, guile-2.0-dev [!ia64 !hurd-i386], guile-1.8-dev [ia64 hurd-i386], libgd-dev
+Depends: ${misc:Depends}, ${shlibs:Depends}, libgeda42 (= ${source:Version}), libgtk2.0-dev, guile-2.0-dev [!ia64], guile-1.8-dev [ia64], libgd-dev
 Description: GPL EDA -- Electronics design software (development files)
  The gEDA project has produced and continues working on a full GPL'd suite and
  toolkit of Electronic Design Automation tools. These tools are used for
