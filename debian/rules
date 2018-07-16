@@ -1,6 +1,5 @@
 #!/usr/bin/make -f
 
-DEB_BUILD_ARCH=$(shell dpkg-architecture -qDEB_BUILD_ARCH)
 TEST_HOME=$(CURDIR)/tmp-home
 
 %:
