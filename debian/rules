@@ -4,7 +4,7 @@ include /usr/share/dpkg/pkg-info.mk
 TEST_HOME=$(CURDIR)/tmp-home
 
 %:
-	dh $@ --with autoreconf
+	dh $@
 
 override_dh_clean:
 	# gnetlist.orig is an upstream file that should not be removed:
