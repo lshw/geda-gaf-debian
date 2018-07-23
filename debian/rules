@@ -37,9 +37,8 @@ override_dh_auto_install:
 	dh_auto_install --sourcedirectory=examples   -- DESTDIR=$(CURDIR)/debian/geda-examples
 
 override_dh_installdocs:
-	dh_installdocs -N$(COMMONPKG) -N$(DEVPKG) -Ngeda -Ngeda-doc
+	dh_installdocs -Ngeda -Ngeda-doc
 	dh_installdocs -pgeda -pgeda-doc --link-doc=geda-doc
-	dh_installdocs -p$(COMMONPKG) -p$(DEVPKG)
 	# Work around install location in some geda- packages:
 	for p in geda-gnetlist geda-gschem geda-gsymcheck geda-utils geda-symbols geda-doc geda-gattrib; do \
 	  rm -rf debian/$$p/usr/share/doc/geda-gaf/man ; \
@@ -55,6 +54,7 @@ override_dh_installdocs:
 
 override_dh_installchangelogs:
 	dh_installchangelogs libgeda/ChangeLog   -p $(COMMONPKG) -p $(LIBPKG)
+	dh_installchangelogs                     -p $(DEVPKG)
 	dh_installchangelogs symbols/ChangeLog   -p geda-symbols
 	dh_installchangelogs docs/ChangeLog      -p geda-doc
 	dh_installchangelogs examples/ChangeLog  -p geda-examples
