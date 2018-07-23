@@ -1,3 +1,14 @@
+geda-gaf (1:1.8.2-8) unstable; urgency=medium
+
+  * Do not use link-doc between -dev & -common packahes
+  * Bumped compat level to 11
+  * Set PERL_USE_UNSAFE_INC=1 during dh_auto_test to make gxyrs test pass
+  * Added install-data.diff patch to fix a check for install binary when full
+    path is not given
+  * Install changelogs for libgeda-dev.
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Mon, 23 Jul 2018 09:15:25 +0200
+
 geda-gaf (1:1.8.2-7) unstable; urgency=medium
 
   [ Bdale Garbee ]
