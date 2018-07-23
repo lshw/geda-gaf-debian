@@ -1,0 +1,17 @@
+Description: check for 'install' binary even if ful path not given
+Author: أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>
+Bug: https://bugs.launchpad.net/geda/+bug/1783027
+Forwarded: https://bugs.launchpad.net/geda/+bug/1783027/+attachment/5166568/+files/install-data.diff
+Index: geda-gaf/build-tools/icon-theme-installer
+===================================================================
+--- geda-gaf.orig/build-tools/icon-theme-installer	2018-07-15 13:11:09.925171995 +0200
++++ geda-gaf/build-tools/icon-theme-installer	2018-07-23 07:16:18.310931260 +0200
+@@ -108,7 +108,7 @@
+ 	exit 1
+ fi
+ 
+-if test ! -x `echo "$INSTALL_DATA_EXEC" | cut -f1 -d' '`; then
++if test ! -x $(which `echo "$INSTALL_DATA_EXEC" | cut -f1 -d' '`); then
+ 	echo "Cannot find '$INSTALL_DATA_EXEC'; You probably want to pass -x \$(INSTALL_DATA)"
+ 	exit 1
+ fi
