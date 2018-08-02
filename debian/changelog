@@ -1,3 +1,11 @@
+geda-gaf (1:1.8.2-9) unstable; urgency=medium
+
+  * Set doc-main-package to geda-docs (Closes: #904949)
+  * Add maintainer scripts to convert libgeda-dev doc dir from symlink to a 
+    real dir (Closes: #905201)
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Thu, 02 Aug 2018 16:13:28 +0200
+
 geda-gaf (1:1.8.2-8) unstable; urgency=medium
 
   * Do not use link-doc between -dev & -common packahes
