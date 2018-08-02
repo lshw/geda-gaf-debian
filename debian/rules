@@ -38,7 +38,8 @@ override_dh_auto_install:
 
 override_dh_installdocs:
 	dh_installdocs -Ngeda -Ngeda-doc
-	dh_installdocs -pgeda -pgeda-doc --link-doc=geda-doc
+	dh_installdocs -pgeda-doc --doc-main-package=geda-doc
+	dh_installdocs -pgeda --link-doc=geda-doc
 	# Work around install location in some geda- packages:
 	for p in geda-gnetlist geda-gschem geda-gsymcheck geda-utils geda-symbols geda-doc geda-gattrib; do \
 	  rm -rf debian/$$p/usr/share/doc/geda-gaf/man ; \
