@@ -1,3 +1,11 @@
+geda-gaf (1:1.8.2-10) unstable; urgency=medium
+
+  * Updated standards version to 4.2.0
+  * Use dpkg-query instead of directly accessing dpkg internal database
+    (Closes: #905669)
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Wed, 08 Aug 2018 05:44:42 +0200
+
 geda-gaf (1:1.8.2-9) unstable; urgency=medium
 
   * Set doc-main-package to geda-docs (Closes: #904949)
