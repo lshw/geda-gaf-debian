@@ -1,3 +1,9 @@
+geda-gaf (1:1.8.2-11) unstable; urgency=medium
+
+  * Added texinfo to build-deps, to fix FTBFS after update of automake to 1.16
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Sat, 11 Aug 2018 14:29:37 +0200
+
 geda-gaf (1:1.8.2-10) unstable; urgency=medium
 
   * Updated standards version to 4.2.0
