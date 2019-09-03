@@ -169,7 +169,7 @@ Package: geda-utils
 Architecture: any
 Breaks: geda (<= 19990516-1)
 Replaces: geda-gnetlist (<< 1:1.8.0)
-Depends: ${misc:Depends}, ${shlibs:Depends}, python, gawk, mawk
+Depends: ${misc:Depends}, ${shlibs:Depends}, python3, gawk, mawk
 Description: GPL EDA -- Electronics design software (utilities)
  The gEDA project has produced and continues working on a full GPL'd suite and
  toolkit of Electronic Design Automation tools. These tools are used for
