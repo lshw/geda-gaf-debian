@@ -1,3 +1,18 @@
+geda-gaf (1:1.10.0-1~1.gbp698cfa) UNRELEASED; urgency=medium
+
+  ** SNAPSHOT build @698cfac150a247599c2da565d163f7c65c11c0e0 **
+
+  * Imported Upstream version 1.10.0
+  * Remove texinfo from build-deps, no more needed according to automake fix in #906426.
+  * Add py3.diff patch to migrate to Python 3
+  * geda-utils: Depend on python3 instead of python (Closes: #936593)
+  * Removed bashisms.diff and no-refdes-warning-fix.patch patches, applied upstream.
+  * Refresh patches
+  * Update standards version to 4.4.1
+  * Update copyright years
+
+ -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Sat, 19 Oct 2019 06:06:43 +0200
+
 geda-gaf (1:1.8.2-11) unstable; urgency=medium
 
   * Added texinfo to build-deps, to fix FTBFS after update of automake to 1.16
