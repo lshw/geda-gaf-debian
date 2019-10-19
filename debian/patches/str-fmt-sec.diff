@@ -1,0 +1,17 @@
+Description: fix string format security issue
+Author: أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>
+Bug: https://bugs.launchpad.net/geda/+bug/1848837
+Forwarded: https://bugs.launchpad.net/geda/+bug/1848837/+attachment/5298340/+files/str-fmt-sec.diff
+Index: geda-gaf/gschem/src/x_controlfd.c
+===================================================================
+--- geda-gaf.orig/gschem/src/x_controlfd.c	2019-10-19 08:30:42.550814107 +0200
++++ geda-gaf/gschem/src/x_controlfd.c	2019-10-19 08:33:31.783491676 +0200
+@@ -346,7 +346,7 @@
+     if (count != 1)
+       fprintf (stderr, "Command usage: help\n");
+     else
+-      fprintf (stderr, help_string);
++      fprintf (stderr, "%s", help_string);
+   }
+ 
+   else
