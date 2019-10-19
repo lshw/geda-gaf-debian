@@ -21,7 +21,7 @@ override_dh_auto_test:
 	mkdir -p $(TEST_HOME)
 	HOME=$(TEST_HOME) PERL_USE_UNSAFE_INC=1 dh_auto_test
 
-LIBPKG=libgeda42
+LIBPKG=libgeda46
 DEVPKG=libgeda-dev
 COMMONPKG=libgeda-common
 

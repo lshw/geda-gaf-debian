@@ -27,7 +27,7 @@ Description: GPL EDA -- Electronics design software (metapackage)
  This is a metapackage which depends on the components required
  for a typical gEDA installation.
 
-Package: libgeda42
+Package: libgeda46
 Architecture: any
 Section: libs
 Depends: ${misc:Depends}, ${shlibs:Depends}, libgeda-common (>= ${source:Version}), libgeda-common (<< ${source:Version}.1~)
@@ -48,7 +48,7 @@ Description: GPL EDA -- Electronics design software (library files)
 Package: libgeda-dev
 Architecture: any
 Section: libdevel
-Depends: ${misc:Depends}, ${shlibs:Depends}, libgeda42 (= ${binary:Version}), libgtk2.0-dev, guile-2.0-dev [!ia64], guile-1.8-dev [ia64], libgd-dev
+Depends: ${misc:Depends}, ${shlibs:Depends}, libgeda46 (= ${binary:Version}), libgtk2.0-dev, guile-2.0-dev [!ia64], guile-1.8-dev [ia64], libgd-dev
 Pre-Depends: ${misc:Pre-Depends}
 Description: GPL EDA -- Electronics design software (development files)
  The gEDA project has produced and continues working on a full GPL'd suite and

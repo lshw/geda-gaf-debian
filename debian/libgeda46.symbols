@@ -1,4 +1,4 @@
-libgeda.so.42 libgeda42 #MINVER#
+libgeda.so.46 libgeda46 #MINVER#
 * Build-Depends-Package: libgeda-dev
  PAPERSIZEtoWORLD@Base 1.6.0
  active_pages@Base 1:1.8.0
