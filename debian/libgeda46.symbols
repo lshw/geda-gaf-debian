@@ -2,6 +2,7 @@ libgeda.so.46 libgeda46 #MINVER#
 * Build-Depends-Package: libgeda-dev
  PAPERSIZEtoWORLD@Base 1.6.0
  active_pages@Base 1:1.8.0
+ add_config_event_x@Base 1:1.10.0
  arc_info@Base 1:1.8.0
  attach_attrib_x@Base 1:1.8.0
  attrib_attachment@Base 1:1.8.0
@@ -12,47 +13,125 @@ libgeda.so.46 libgeda46 #MINVER#
  complex_contents@Base 1:1.8.0
  complex_info@Base 1:1.8.0
  complex_remove_x@Base 1:1.8.0
+ config_boolean@Base 1:1.10.0
+ config_boolean_list@Base 1:1.10.0
+ config_changed_p@Base 1:1.10.0
+ config_filename@Base 1:1.10.0
+ config_groups@Base 1:1.10.0
+ config_has_group_p@Base 1:1.10.0
+ config_int@Base 1:1.10.0
+ config_int_list@Base 1:1.10.0
+ config_keys@Base 1:1.10.0
+ config_load_x@Base 1:1.10.0
+ config_loaded_p@Base 1:1.10.0
+ config_p@Base 1:1.10.0
+ config_parent@Base 1:1.10.0
+ config_real@Base 1:1.10.0
+ config_real_list@Base 1:1.10.0
+ config_save_x@Base 1:1.10.0
+ config_source@Base 1:1.10.0
+ config_string@Base 1:1.10.0
+ config_string_list@Base 1:1.10.0
+ config_trusted_p@Base 1:1.10.0
  copy_object@Base 1:1.8.0
  default_always_promote_attributes@Base 1.6.0
  default_attribute_promotion@Base 1.6.0
  default_bitmap_directory@Base 1.6.0
  default_bus_ripper_symname@Base 1.6.0
+ default_config_context@Base 1:1.10.0
  default_init_bottom@Base 1.6.0
+ default_init_left@Base 1:1.10.0
  default_init_right@Base 1.6.0
+ default_init_top@Base 1:1.10.0
  default_keep_invisible@Base 1.6.0
  default_make_backup_files@Base 1:1.8.0
- default_postscript_prolog@Base 1.6.0
+#MISSING: 1:1.10.0
  default_promote_invisible@Base 1.6.0
- default_untitled_name@Base 1.6.0
+#MISSING: 1:1.10.0
  detach_attrib_x@Base 1:1.8.0
- dist@Base 1.6.0
+#MISSING: 1:1.10.0
  do_logging@Base 1.6.0
+ eda_config_error_quark@Base 1:1.10.0
+ eda_config_get_boolean@Base 1:1.10.0
+ eda_config_get_boolean_list@Base 1:1.10.0
+ eda_config_get_context_for_file@Base 1:1.10.0
+ eda_config_get_context_for_path@Base 1:1.10.0
+ eda_config_get_default_context@Base 1:1.10.0
+ eda_config_get_double@Base 1:1.10.0
+ eda_config_get_double_list@Base 1:1.10.0
+ eda_config_get_file@Base 1:1.10.0
+ eda_config_get_filename@Base 1:1.10.0
+ eda_config_get_groups@Base 1:1.10.0
+ eda_config_get_int@Base 1:1.10.0
+ eda_config_get_int_list@Base 1:1.10.0
+ eda_config_get_keys@Base 1:1.10.0
+ eda_config_get_parent@Base 1:1.10.0
+ eda_config_get_source@Base 1:1.10.0
+ eda_config_get_string@Base 1:1.10.0
+ eda_config_get_string_list@Base 1:1.10.0
+ eda_config_get_system_context@Base 1:1.10.0
+ eda_config_get_trusted_context@Base 1:1.10.0
+ eda_config_get_type@Base 1:1.10.0
+ eda_config_get_user_context@Base 1:1.10.0
+ eda_config_has_group@Base 1:1.10.0
+ eda_config_has_key@Base 1:1.10.0
+ eda_config_is_changed@Base 1:1.10.0
+ eda_config_is_inherited@Base 1:1.10.0
+ eda_config_is_loaded@Base 1:1.10.0
+ eda_config_is_trusted@Base 1:1.10.0
+ eda_config_load@Base 1:1.10.0
+ eda_config_save@Base 1:1.10.0
+ eda_config_set_boolean@Base 1:1.10.0
+ eda_config_set_boolean_list@Base 1:1.10.0
+ eda_config_set_double@Base 1:1.10.0
+ eda_config_set_double_list@Base 1:1.10.0
+ eda_config_set_int@Base 1:1.10.0
+ eda_config_set_int_list@Base 1:1.10.0
+ eda_config_set_parent@Base 1:1.10.0
+ eda_config_set_string@Base 1:1.10.0
+ eda_config_set_string_list@Base 1:1.10.0
+ eda_config_set_trusted@Base 1:1.10.0
  eda_error_quark@Base 1:1.8.0
  edascm_c_current_toplevel@Base 1:1.8.0
+ edascm_c_make_closure@Base 1:1.10.0
  edascm_c_set_gc@Base 1:1.8.0
  edascm_c_with_toplevel@Base 1:1.8.0
  edascm_current_toplevel@Base 1:1.8.0
  edascm_dynwind_toplevel@Base 1:1.8.0
+ edascm_from_closure@Base 1:1.10.0
+ edascm_from_config@Base 1:1.10.0
  edascm_from_object@Base 1:1.8.0
  edascm_from_object_glist@Base 1:1.8.0
  edascm_from_page@Base 1:1.8.0
  edascm_from_toplevel@Base 1:1.8.0
+ edascm_hook_proxy_get_type@Base 1:1.10.0
+ edascm_hook_proxy_new_with_hook@Base 1:1.10.0
  edascm_init@Base 1:1.8.0
  edascm_init_attrib@Base 1:1.8.0
+ edascm_init_closure@Base 1:1.10.0
  edascm_init_complex@Base 1:1.8.0
+ edascm_init_config@Base 1:1.10.0
  edascm_init_deprecated@Base 1:1.8.0
+ edascm_init_log@Base 1:1.10.0
  edascm_init_object@Base 1:1.8.0
  edascm_init_os@Base 1:1.8.0
  edascm_init_page@Base 1:1.8.0
  edascm_init_smob@Base 1:1.8.0
  edascm_init_toplevel@Base 1:1.8.0
+ edascm_is_config@Base 1:1.10.0
  edascm_is_object@Base 1:1.8.0
  edascm_is_object_type@Base 1:1.8.0
  edascm_is_page@Base 1:1.8.0
  edascm_object_state_sym@Base 1:1.8.0
+ edascm_param_spec_scm@Base 1:1.10.0
+ edascm_param_spec_scm_get_type@Base 1:1.10.0
+ edascm_scm_get_type@Base 1:1.10.0
+ edascm_to_config@Base 1:1.10.0
  edascm_to_object@Base 1:1.8.0
  edascm_to_object_glist@Base 1:1.8.0
  edascm_to_page@Base 1:1.8.0
+ edascm_value_get_scm@Base 1:1.10.0
+ edascm_value_set_scm@Base 1:1.10.0
  edascm_with_toplevel@Base 1:1.8.0
  f_close@Base 1.6.0
  f_get_autosave_filename@Base 1.6.0
@@ -60,16 +139,16 @@ libgeda.so.46 libgeda46 #MINVER#
  f_normalize_filename@Base 1.6.0
  f_open@Base 1.6.0
  f_open_flags@Base 1.6.0
- f_print_command@Base 1.6.0
- f_print_file@Base 1.6.0
- f_print_footer@Base 1.6.0
- f_print_header@Base 1.6.0
- f_print_initialize_glyph_table@Base 1.6.0
- f_print_objects@Base 1.6.0
- f_print_set_color@Base 1.6.0
- f_print_set_line_width@Base 1.6.0
- f_print_set_type@Base 1.6.0
- f_print_stream@Base 1.6.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
  f_save@Base 1.6.0
  follow_symlinks@Base 1.6.0
  g_rc_always_promote_attributes@Base 1.6.0
@@ -83,21 +162,22 @@ libgeda.so.46 libgeda46 #MINVER#
  g_rc_make_backup_files@Base 1:1.8.0
  g_rc_mode_general@Base 1.6.0
  g_rc_parse@Base 1.6.0
- g_rc_parse_file@Base 1:1.8.0
+#MISSING: 1:1.10.0
  g_rc_parse_handler@Base 1:1.8.0
  g_rc_parse_local@Base 1:1.8.0
  g_rc_parse_system@Base 1:1.8.0
  g_rc_parse_user@Base 1:1.8.0
- g_rc_postscript_prolog@Base 1.6.0
+#MISSING: 1:1.10.0
  g_rc_print_color_map@Base 1.6.0
  g_rc_promote_invisible@Base 1.6.0
+ g_rc_rc_config@Base 1:1.10.0
  g_rc_rc_filename@Base 1:1.8.0
  g_rc_reset_component_library@Base 1.6.0
  g_rc_reset_source_library@Base 1.6.0
  g_rc_scheme_directory@Base 1.6.0
  g_rc_source_library@Base 1.6.0
  g_rc_source_library_search@Base 1.6.0
- g_rc_untitled_name@Base 1.6.0
+#MISSING: 1:1.10.0
  g_rc_world_size@Base 1.6.0
  g_read_file@Base 1.6.0
  g_read_file__body@Base 1:1.8.0
@@ -122,6 +202,7 @@ libgeda.so.46 libgeda46 #MINVER#
  inside_region@Base 1.6.0
  libgeda_init@Base 1.6.0
  line_info@Base 1:1.8.0
+ log_x@Base 1:1.10.0
  m_bounds_init@Base 1.6.0
  m_bounds_of_points@Base 1.6.0
  m_box_shortest_distance@Base 1.6.0
@@ -165,28 +246,28 @@ libgeda.so.46 libgeda46 #MINVER#
  o_arc_mirror_world@Base 1.6.0
  o_arc_modify@Base 1.6.0
  o_arc_new@Base 1.6.0
- o_arc_print@Base 1.6.0
- o_arc_print_center@Base 1.6.0
- o_arc_print_dashed@Base 1.6.0
- o_arc_print_dotted@Base 1.6.0
- o_arc_print_phantom@Base 1.6.0
- o_arc_print_solid@Base 1.6.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
  o_arc_read@Base 1.6.0
- o_arc_recalc@Base 1.6.0
+#MISSING: 1:1.10.0
  o_arc_rotate_world@Base 1.6.0
  o_arc_save@Base 1.6.0
  o_arc_shortest_distance@Base 1.6.0
  o_arc_translate_world@Base 1.6.0
  o_arc_within_sweep@Base 1.6.0
  o_attrib_add@Base 1.6.0
- o_attrib_append_attribs_changed_hook@Base 1:1.8.0
+#MISSING: 1:1.10.0
  o_attrib_attach@Base 1.6.0
  o_attrib_attach_list@Base 1.6.0
  o_attrib_detach_all@Base 1.6.0
- o_attrib_emit_attribs_changed@Base 1:1.8.0
+#MISSING: 1:1.10.0
  o_attrib_find_attrib_by_name@Base 1.6.0
  o_attrib_find_floating_attribs@Base 1.6.0
- o_attrib_freeze_hooks@Base 1:1.8.0
+#MISSING: 1:1.10.0
  o_attrib_get_name_value@Base 1.6.0
  o_attrib_is_attached@Base 1.6.0
  o_attrib_is_inherited@Base 1.6.0
@@ -198,7 +279,7 @@ libgeda.so.46 libgeda46 #MINVER#
  o_attrib_search_inherited_attribs_by_name@Base 1.6.0
  o_attrib_search_object_attribs_by_name@Base 1.6.0
  o_attrib_string_get_name_value@Base 1.6.0
- o_attrib_thaw_hooks@Base 1:1.8.0
+#MISSING: 1:1.10.0
  o_bounds_invalidate@Base 1.6.0
  o_box_copy@Base 1.6.0
  o_box_get_position@Base 1.6.0
@@ -206,31 +287,31 @@ libgeda.so.46 libgeda46 #MINVER#
  o_box_modify@Base 1.6.0
  o_box_modify_all@Base 1:1.8.0
  o_box_new@Base 1.6.0
- o_box_print@Base 1.6.0
- o_box_print_center@Base 1.6.0
- o_box_print_dashed@Base 1.6.0
- o_box_print_dotted@Base 1.6.0
- o_box_print_filled@Base 1.6.0
- o_box_print_hatch@Base 1.6.0
- o_box_print_mesh@Base 1.6.0
- o_box_print_phantom@Base 1.6.0
- o_box_print_solid@Base 1.6.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
  o_box_read@Base 1.6.0
- o_box_recalc@Base 1.6.0
+#MISSING: 1:1.10.0
  o_box_rotate_world@Base 1.6.0
  o_box_save@Base 1.6.0
  o_box_shortest_distance@Base 1.6.0
  o_box_translate_world@Base 1.6.0
- o_bus_consolidate@Base 1.6.0
+#MISSING: 1:1.10.0
  o_bus_copy@Base 1.6.0
  o_bus_get_position@Base 1.6.0
  o_bus_mirror_world@Base 1.6.0
  o_bus_modify@Base 1.6.0
  o_bus_new@Base 1.6.0
  o_bus_orientation@Base 1.6.0
- o_bus_print@Base 1.6.0
+#MISSING: 1:1.10.0
  o_bus_read@Base 1.6.0
- o_bus_recalc@Base 1.6.0
+#MISSING: 1:1.10.0
  o_bus_rotate_world@Base 1.6.0
  o_bus_save@Base 1.6.0
  o_bus_translate_world@Base 1.6.0
@@ -239,17 +320,17 @@ libgeda.so.46 libgeda46 #MINVER#
  o_circle_mirror_world@Base 1.6.0
  o_circle_modify@Base 1.6.0
  o_circle_new@Base 1.6.0
- o_circle_print@Base 1.6.0
- o_circle_print_center@Base 1.6.0
- o_circle_print_dashed@Base 1.6.0
- o_circle_print_dotted@Base 1.6.0
- o_circle_print_filled@Base 1.6.0
- o_circle_print_hatch@Base 1.6.0
- o_circle_print_mesh@Base 1.6.0
- o_circle_print_phantom@Base 1.6.0
- o_circle_print_solid@Base 1.6.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
  o_circle_read@Base 1.6.0
- o_circle_recalc@Base 1.6.0
+#MISSING: 1:1.10.0
  o_circle_rotate_world@Base 1.6.0
  o_circle_save@Base 1.6.0
  o_circle_shortest_distance@Base 1.6.0
@@ -265,7 +346,7 @@ libgeda.so.46 libgeda46 #MINVER#
  o_complex_new_embedded@Base 1.6.0
  o_complex_promote_attribs@Base 1.6.0
  o_complex_read@Base 1.6.0
- o_complex_recalc@Base 1.6.0
+#MISSING: 1:1.10.0
  o_complex_rotate_world@Base 1.6.0
  o_complex_save@Base 1.6.0
  o_complex_shortest_distance@Base 1.6.0
@@ -277,7 +358,7 @@ libgeda.so.46 libgeda46 #MINVER#
  o_get_fill_options@Base 1.6.0
  o_get_line_options@Base 1.6.0
  o_get_page@Base 1:1.8.0
- o_get_page_compat@Base 1:1.8.0
+#MISSING: 1:1.10.0
  o_get_parent@Base 1:1.8.0
  o_get_position@Base 1.6.0
  o_glist_copy_all@Base 1.6.0
@@ -292,32 +373,32 @@ libgeda.so.46 libgeda46 #MINVER#
  o_line_mirror_world@Base 1.6.0
  o_line_modify@Base 1.6.0
  o_line_new@Base 1.6.0
- o_line_print@Base 1.6.0
- o_line_print_center@Base 1.6.0
- o_line_print_dashed@Base 1.6.0
- o_line_print_dotted@Base 1.6.0
- o_line_print_phantom@Base 1.6.0
- o_line_print_solid@Base 1.6.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
  o_line_read@Base 1.6.0
- o_line_recalc@Base 1.6.0
+#MISSING: 1:1.10.0
  o_line_rotate_world@Base 1.6.0
  o_line_save@Base 1.6.0
- o_line_scale_world@Base 1.6.0
+#MISSING: 1:1.10.0
  o_line_shortest_distance@Base 1.6.0
  o_line_translate_world@Base 1.6.0
  o_mirror_world@Base 1.6.0
  o_net_consolidate@Base 1.6.0
  o_net_copy@Base 1.6.0
  o_net_get_position@Base 1.6.0
- o_net_is_fully_connected@Base 1:1.8.0
+#MISSING: 1:1.10.0
  o_net_mirror_world@Base 1.6.0
  o_net_modify@Base 1.6.0
  o_net_new@Base 1.6.0
  o_net_orientation@Base 1.6.0
- o_net_print@Base 1.6.0
+#MISSING: 1:1.10.0
  o_net_read@Base 1.6.0
- o_net_recalc@Base 1.6.0
- o_net_refresh_conn_cache@Base 1:1.8.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
  o_net_rotate_world@Base 1.6.0
  o_net_save@Base 1.6.0
  o_net_translate_world@Base 1.6.0
@@ -328,9 +409,10 @@ libgeda.so.46 libgeda46 #MINVER#
  o_path_mirror_world@Base 1.6.0
  o_path_modify@Base 1.6.0
  o_path_new@Base 1.6.0
- o_path_print@Base 1.6.0
+ o_path_new_take_path@Base 1:1.10.0
+#MISSING: 1:1.10.0
  o_path_read@Base 1.6.0
- o_path_recalc@Base 1.6.0
+#MISSING: 1:1.10.0
  o_path_rotate_world@Base 1.6.0
  o_path_save@Base 1.6.0
  o_path_shortest_distance@Base 1.6.0
@@ -348,9 +430,9 @@ libgeda.so.46 libgeda46 #MINVER#
  o_picture_modify@Base 1.6.0
  o_picture_modify_all@Base 1:1.8.0
  o_picture_new@Base 1.6.0
- o_picture_print@Base 1.6.0
+#MISSING: 1:1.10.0
  o_picture_read@Base 1.6.0
- o_picture_recalc@Base 1.6.0
+#MISSING: 1:1.10.0
  o_picture_rotate_world@Base 1.6.0
  o_picture_save@Base 1.6.0
  o_picture_set_from_buffer@Base 1:1.8.0
@@ -363,9 +445,9 @@ libgeda.so.46 libgeda46 #MINVER#
  o_pin_mirror_world@Base 1.6.0
  o_pin_modify@Base 1.6.0
  o_pin_new@Base 1.6.0
- o_pin_print@Base 1.6.0
+#MISSING: 1:1.10.0
  o_pin_read@Base 1.6.0
- o_pin_recalc@Base 1.6.0
+#MISSING: 1:1.10.0
  o_pin_rotate_world@Base 1.6.0
  o_pin_save@Base 1.6.0
  o_pin_set_type@Base 1.6.0
@@ -374,14 +456,14 @@ libgeda.so.46 libgeda46 #MINVER#
  o_read@Base 1.6.0
  o_read_attribs@Base 1.6.0
  o_read_buffer@Base 1.6.0
- o_recalc_object_glist@Base 1.6.0
- o_recalc_single_object@Base 1.6.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
  o_remove_change_notify@Base 1:1.8.0
  o_rotate_world@Base 1.6.0
  o_save@Base 1.6.0
  o_save_buffer@Base 1.6.0
  o_save_objects@Base 1.6.0
- o_scale@Base 1.6.0
+#MISSING: 1:1.10.0
  o_selection_add@Base 1.6.0
  o_selection_new@Base 1.6.0
  o_selection_print_all@Base 1.6.0
@@ -401,10 +483,10 @@ libgeda.so.46 libgeda46 #MINVER#
  o_text_mirror_world@Base 1.6.0
  o_text_new@Base 1.6.0
  o_text_num_lines@Base 1.6.0
- o_text_print@Base 1.6.0
- o_text_print_text_string@Base 1.6.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
  o_text_read@Base 1.6.0
- o_text_recalc@Base 1.6.0
+#MISSING: 1:1.10.0
  o_text_recreate@Base 1.6.0
  o_text_rotate_world@Base 1.6.0
  o_text_save@Base 1.6.0
@@ -426,12 +508,14 @@ libgeda.so.46 libgeda46 #MINVER#
  object_type@Base 1:1.8.0
  page_append_x@Base 1:1.8.0
  page_contents@Base 1:1.8.0
+ page_control_counter@Base 1:1.10.0
  page_dirty@Base 1:1.8.0
  page_filename@Base 1:1.8.0
  page_p@Base 1:1.8.0
  page_remove_x@Base 1:1.8.0
  page_to_string@Base 1:1.8.0
  parse_attrib@Base 1:1.8.0
+ path_config_context@Base 1:1.10.0
  path_insert_x@Base 1:1.8.0
  path_length@Base 1:1.8.0
  path_ref@Base 1:1.8.0
@@ -440,9 +524,10 @@ libgeda.so.46 libgeda46 #MINVER#
  pin_type@Base 1:1.8.0
  platform@Base 1:1.8.0
  print_colors@Base 1.6.0
- print_struct@Base 1.6.0
+#MISSING: 1:1.10.0
  print_struct_forw@Base 1.6.0
  promotable_attribs@Base 1:1.8.0
+ remove_config_event_x@Base 1:1.10.0
  remove_last_nl@Base 1.6.0
  remove_nl@Base 1.6.0
  rotate_object_x@Base 1:1.8.0
@@ -459,6 +544,9 @@ libgeda.so.46 libgeda46 #MINVER#
  s_clib_add_command@Base 1.6.0
  s_clib_add_directory@Base 1.6.0
  s_clib_add_scm@Base 1.6.0
+ s_clib_add_update_callback@Base 1:1.10.0
+ s_clib_begin_update@Base 1:1.10.0
+ s_clib_end_update@Base 1:1.10.0
  s_clib_flush_search_cache@Base 1.6.0
  s_clib_flush_symbol_cache@Base 1.6.0
  s_clib_free@Base 1.6.0
@@ -467,7 +555,9 @@ libgeda.so.46 libgeda46 #MINVER#
  s_clib_get_symbol_by_name@Base 1.6.0
  s_clib_init@Base 1.6.0
  s_clib_refresh@Base 1.6.0
+ s_clib_remove_update_callback@Base 1:1.10.0
  s_clib_search@Base 1.6.0
+ s_clib_source_get_directory@Base 1:1.10.0
  s_clib_source_get_name@Base 1.6.0
  s_clib_source_get_symbols@Base 1.6.0
  s_clib_symbol_get_data@Base 1.6.0
@@ -480,52 +570,55 @@ libgeda.so.46 libgeda46 #MINVER#
  s_color_map_defaults@Base 1.6.0
  s_color_map_from_scm@Base 1.6.0
  s_color_map_to_scm@Base 1.6.0
- s_color_ps_string@Base 1.6.0
+#MISSING: 1:1.10.0
  s_color_rgba_decode@Base 1.6.0
  s_color_rgba_encode@Base 1.6.0
- s_conn_append_conns_changed_hook@Base 1:1.8.0
+ s_conn_add_object@Base 1:1.10.0
+#MISSING: 1:1.10.0
  s_conn_check_midpoint@Base 1.6.0
- s_conn_emit_conns_changed@Base 1:1.8.0
- s_conn_freeze_hooks@Base 1:1.8.0
- s_conn_init@Base 1:1.8.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
  s_conn_net_search@Base 1.6.0
  s_conn_print@Base 1.6.0
  s_conn_remove_object@Base 1.6.0
+ s_conn_remove_object_connections@Base 1:1.10.0
  s_conn_remove_other@Base 1.6.0
  s_conn_return_new@Base 1.6.0
  s_conn_return_others@Base 1.6.0
- s_conn_thaw_hooks@Base 1:1.8.0
+#MISSING: 1:1.10.0
  s_conn_uniq@Base 1.6.0
  s_conn_update_glist@Base 1.6.0
  s_conn_update_object@Base 1.6.0
- s_cue_output_all@Base 1.6.0
- s_cue_output_lowlevel@Base 1.6.0
- s_cue_output_lowlevel_midpoints@Base 1.6.0
- s_cue_output_single@Base 1.6.0
- s_cue_postscript_arrow@Base 1:1.8.0
- s_cue_postscript_fillbox@Base 1.6.0
- s_cue_postscript_junction@Base 1.6.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
  s_delete_object@Base 1.6.0
  s_delete_object_glist@Base 1.6.0
  s_encoding_base64_decode@Base 1.6.0
  s_encoding_base64_encode@Base 1.6.0
  s_expand_env_variables@Base 1.6.0
  s_hierarchy_down_schematic_single@Base 1.6.0
- s_hierarchy_down_symbol@Base 1.6.0
+#MISSING: 1:1.10.0
  s_hierarchy_find_next_page@Base 1.6.0
  s_hierarchy_find_prev_page@Base 1.6.0
- s_hierarchy_find_up_page@Base 1.6.0
+#MISSING: 1:1.10.0
+ s_hierarchy_load_subpage@Base 1:1.10.0
  s_hierarchy_print_page@Base 1.6.0
  s_hierarchy_traversepages@Base 1.6.0
  s_log_close@Base 1.6.0
  s_log_init@Base 1.6.0
  s_log_read@Base 1.6.0
- s_menu_add_entry@Base 1.6.0
- s_menu_free@Base 1.6.0
- s_menu_init@Base 1.6.0
- s_menu_print@Base 1.6.0
- s_menu_return_entry@Base 1.6.0
- s_menu_return_num@Base 1.6.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
  s_object_add_weak_ptr@Base 1:1.8.0
  s_object_remove_weak_ptr@Base 1:1.8.0
  s_object_weak_ref@Base 1:1.8.0
@@ -554,13 +647,13 @@ libgeda.so.46 libgeda46 #MINVER#
  s_page_search_by_page_id@Base 1.6.0
  s_page_weak_ref@Base 1:1.8.0
  s_page_weak_unref@Base 1:1.8.0
- s_papersizes_add_entry@Base 1.6.0
- s_papersizes_free@Base 1.6.0
- s_papersizes_get@Base 1.6.0
- s_papersizes_get_size@Base 1.6.0
- s_papersizes_init@Base 1.6.0
- s_papersizes_print@Base 1.6.0
- s_papersizes_uniq@Base 1.6.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
  s_path_art_finish@Base 1.6.0
  s_path_curveto@Base 1.6.0
  s_path_free@Base 1.6.0
@@ -583,7 +676,7 @@ libgeda.so.46 libgeda46 #MINVER#
  s_slib_init@Base 1.6.0
  s_slib_print@Base 1.6.0
  s_slib_print_dirs@Base 1.6.0
- s_slib_search@Base 1.6.0
+#MISSING: 1:1.10.0
  s_slib_search_dirs@Base 1.6.0
  s_slib_search_for_dirname@Base 1.6.0
  s_slib_search_lowlevel@Base 1.6.0
@@ -595,19 +688,20 @@ libgeda.so.46 libgeda46 #MINVER#
  s_textbuffer_new@Base 1.6.0
  s_textbuffer_next@Base 1.6.0
  s_textbuffer_next_line@Base 1.6.0
- s_tile_add_object@Base 1.6.0
- s_tile_free_all@Base 1.6.0
- s_tile_get_objectlists@Base 1.6.0
- s_tile_init@Base 1.6.0
- s_tile_print@Base 1.6.0
- s_tile_remove_object@Base 1.6.0
- s_tile_update_object@Base 1.6.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
+#MISSING: 1:1.10.0
  s_toplevel_add_weak_ptr@Base 1:1.8.0
- s_toplevel_append_new_hook@Base 1:1.8.0
+#MISSING: 1:1.10.0
  s_toplevel_delete@Base 1.6.0
  s_toplevel_get_symbols@Base 1.6.0
  s_toplevel_new@Base 1.6.0
  s_toplevel_remove_weak_ptr@Base 1:1.8.0
+ s_toplevel_set_page_current@Base 1:1.10.0
  s_toplevel_weak_ref@Base 1:1.8.0
  s_toplevel_weak_unref@Base 1:1.8.0
  s_undo_add@Base 1.6.0
@@ -627,11 +721,15 @@ libgeda.so.46 libgeda46 #MINVER#
  s_weakref_notify@Base 1:1.8.0
  s_weakref_remove@Base 1:1.8.0
  s_weakref_remove_ptr@Base 1:1.8.0
+ scheme_rc_config_fluid@Base 1:1.10.0
  scheme_toplevel_fluid@Base 1:1.8.0
  set_arc_x@Base 1:1.8.0
  set_box_x@Base 1:1.8.0
  set_circle_x@Base 1:1.8.0
  set_complex_x@Base 1:1.8.0
+ set_config_parent_x@Base 1:1.10.0
+ set_config_trusted_x@Base 1:1.10.0
+ set_config_x@Base 1:1.10.0
  set_line_x@Base 1:1.8.0
  set_object_color_x@Base 1:1.8.0
  set_object_fill_x@Base 1:1.8.0
@@ -641,13 +739,17 @@ libgeda.so.46 libgeda46 #MINVER#
  set_picture_data_vector_x@Base 1:1.8.0
  set_picture_x@Base 1:1.8.0
  set_text_x@Base 1:1.8.0
- set_window@Base 1.6.0
+#MISSING: 1:1.10.0
  string_to_page@Base 1:1.8.0
+ sys_config_dirs@Base 1:1.10.0
+ sys_data_dirs@Base 1:1.10.0
+ system_config_context@Base 1:1.10.0
  tab_in_chars@Base 1.6.0
  text_info@Base 1:1.8.0
  translate_object_x@Base 1:1.8.0
  u_basic_breakup_string@Base 1.6.0
- unicode_char_to_glyph@Base 1.6.0
+#MISSING: 1:1.10.0
+ user_config_context@Base 1:1.10.0
  vstbl_get_val@Base 1.6.0
  vstbl_lookup_str@Base 1.6.0
  world_get_arc_bounds@Base 1.6.0
