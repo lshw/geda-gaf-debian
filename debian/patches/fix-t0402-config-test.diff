@@ -1,0 +1,49 @@
+Description: libgeda: Fix test case `t0402-config.scm'
+ The order in which `config-keys' returns its results isn't defined.
+ Fix the test so it accepts any order.
+Origin: commit:be3459252aa36dde0155fa61efa9c3d1cf1cd7d0
+Bug: https://bugs.launchpad.net/bugs/1848838
+---
+diff --git a/libgeda/scheme/unit-test.scm b/libgeda/scheme/unit-test.scm
+index 2849c8b..96dd00d 100644
+--- a/libgeda/scheme/unit-test.scm
++++ b/libgeda/scheme/unit-test.scm
+@@ -44,6 +44,7 @@
+   #:use-module (ice-9 pretty-print)
+   #:export (assert-true
+             assert-equal
++            assert-same-strings
+             %assert-thrown
+             tests-passed?
+             report-tests
+@@ -72,6 +73,15 @@
+              (simple-format #f "  assert-equal: expected: ~S got: ~S"
+                             expected result))))
+ 
++(define (assert-same-strings expected result)
++  (let ((sorted-expected (sort-list expected string<?))
++        (sorted-result (sort-list result string<?)))
++    (if (equal? sorted-expected sorted-result)
++        #t
++        (throw 'test-failed-exception
++               (simple-format #f "  assert-same-strings: expected: ~S got: ~S"
++                              sorted-expected sorted-result)))))
++
+ (define (%assert-thrown key thunk)
+   (catch key
+          (lambda ()
+diff --git a/libgeda/scheme/unit-tests/t0402-config.scm b/libgeda/scheme/unit-tests/t0402-config.scm
+index 1e129dc..e8228c6 100644
+--- a/libgeda/scheme/unit-tests/t0402-config.scm
++++ b/libgeda/scheme/unit-tests/t0402-config.scm
+@@ -217,7 +217,7 @@
+ 
+          (set-config! b "foo" "bam" #t)
+          (assert-equal '("bar") (config-keys a "foo"))
+-         (assert-equal '("bam" "bar") (config-keys b "foo"))
++         (assert-same-strings '("bam" "bar") (config-keys b "foo"))
+          (assert-true (config-has-key? b "foo" "bam"))
+          (assert-equal #f (config-has-key? a "foo" "bam")))
+ 
+--
+cgit v0.9
