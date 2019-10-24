@@ -2,3 +2,4 @@ install-data.diff
 py3.diff
 str-fmt-sec.diff
 fix-t0402-config-test.diff
+parenthesis-warn-fix.diff
