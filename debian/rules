@@ -24,6 +24,7 @@ DEVPKG=libgeda-dev
 COMMONPKG=libgeda-common
 
 override_dh_auto_install:
+	dh_auto_install -- DESTDIR=$(CURDIR)/debian/tmp
 	dh_auto_install --sourcedirectory=libgeda    -- DESTDIR=$(CURDIR)/debian/tmp
 	dh_auto_install --sourcedirectory=gschem     -- DESTDIR=$(CURDIR)/debian/geda-gschem
 	dh_auto_install --sourcedirectory=gattrib    -- DESTDIR=$(CURDIR)/debian/geda-gattrib
