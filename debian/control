@@ -182,6 +182,21 @@ Description: GPL EDA -- Electronics design software (utilities)
  .
  This package contains miscellaneous utilities related to gEDA.
 
+Package: geda-gaf
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}, python3, gawk, mawk
+Description: GPL EDA -- Electronics design software (gaf utility)
+ The gEDA project has produced and continues working on a full GPL'd suite and
+ toolkit of Electronic Design Automation tools. These tools are used for
+ electrical circuit design, schematic capture, simulation, prototyping, and
+ production. Currently, the gEDA project offers a mature suite of free software
+ applications for electronics design, including schematic capture, attribute
+ management, bill of materials (BOM) generation, netlisting into over 20
+ netlist formats, analog and digital simulation, and printed circuit board
+ (PCB) layout.
+ .
+ This package contains gaf utility.
+
 Package: geda-examples
 Recommends: geda
 Architecture: all
