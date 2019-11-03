@@ -1,0 +1,1 @@
+dir_to_symlink /usr/share/doc/geda geda-doc 1:1.8.1-2
