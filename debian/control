@@ -11,7 +11,7 @@ Vcs-Browser: https://salsa.debian.org/electronics-team/geda-gaf
 
 Package: geda
 Architecture: all
-Depends: ${misc:Depends}, geda-gschem, geda-gnetlist, geda-doc
+Depends: ${misc:Depends}, geda-gschem, geda-gnetlist, geda-cli, geda-doc
 Recommends: geda-gsymcheck, geda-gattrib
 Suggests: geda-utils, geda-examples, gerbv, pcb
 Description: GPL EDA -- Electronics design software (metapackage)
