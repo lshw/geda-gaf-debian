@@ -1,4 +1,4 @@
-libgeda.so.46 libgeda46 #MINVER#
+libgeda.so.47 libgeda47 #MINVER#
 * Build-Depends-Package: libgeda-dev
  PAPERSIZEtoWORLD@Base 1.6.0
  active_pages@Base 1:1.8.0
@@ -766,7 +766,7 @@ libgeda.so.46 libgeda46 #MINVER#
  world_get_single_object_bounds@Base 1.6.0
  world_get_text_bounds@Base 1.6.0
  x_log_update_func@Base 1.6.0
-libgedacairo.so.1 libgeda46 #MINVER#
+libgedacairo.so.1 libgeda47 #MINVER#
 * Build-Depends-Package: libgeda-dev
  eda_cairo_arc@Base 1:1.10.0
  eda_cairo_box@Base 1:1.10.0
@@ -796,7 +796,7 @@ libgedacairo.so.1 libgeda46 #MINVER#
  eda_renderer_get_user_bounds@Base 1:1.10.0
  eda_renderer_new@Base 1:1.10.0
  eda_renderer_set_color_map@Base 1:1.10.0
-libxornstorage.so.0 libgeda46 #MINVER#
+libxornstorage.so.0 libgeda47 #MINVER#
 * Build-Depends-Package: libgeda-dev
  _Z13data_is_valid13xorn_obtype_tPKv@Base 1:1.10.0
  _Z9copy_data13xorn_obtype_tPKv@Base 1:1.10.0
