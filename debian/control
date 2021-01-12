@@ -182,7 +182,7 @@ Description: GPL EDA -- Electronics design software (utilities)
  .
  This package contains miscellaneous utilities related to gEDA.
 
-Package: geda-gaf
+Package: geda-cli
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}, python3, gawk, mawk
 Description: GPL EDA -- Electronics design software (gaf utility)

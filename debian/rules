@@ -32,7 +32,7 @@ override_dh_auto_install:
 	dh_auto_install --sourcedirectory=gnetlist-legacy   -- DESTDIR=$(CURDIR)/debian/geda-gnetlist
 	dh_auto_install --sourcedirectory=gsymcheck  -- DESTDIR=$(CURDIR)/debian/geda-gsymcheck
 	dh_auto_install --sourcedirectory=utils      -- DESTDIR=$(CURDIR)/debian/geda-utils
-	dh_auto_install --sourcedirectory=gaf        -- DESTDIR=$(CURDIR)/debian/geda-gaf
+	dh_auto_install --sourcedirectory=gaf        -- DESTDIR=$(CURDIR)/debian/geda-cli
 	dh_auto_install --sourcedirectory=symbols    -- DESTDIR=$(CURDIR)/debian/geda-symbols
 	dh_auto_install --sourcedirectory=docs       -- DESTDIR=$(CURDIR)/debian/geda-doc
 	dh_auto_install --sourcedirectory=examples   -- DESTDIR=$(CURDIR)/debian/geda-examples
@@ -42,7 +42,7 @@ override_dh_installdocs:
 	dh_installdocs -pgeda-doc --doc-main-package=geda-doc
 	dh_installdocs -pgeda --link-doc=geda-doc
 	# Work around install location in some geda- packages:
-	for p in geda-gnetlist geda-gschem geda-gsymcheck geda-utils geda-symbols geda-doc geda-gattrib geda-gaf; do \
+	for p in geda-gnetlist geda-gschem geda-gsymcheck geda-utils geda-symbols geda-doc geda-gattrib geda-cli; do \
 	  rm -rf debian/$$p/usr/share/doc/geda-gaf/man ; \
 	  [ ! -d debian/$$p/usr/share/doc/$$p ] || ( \
 	    mv debian/$$p/usr/share/doc/geda-gaf/*  \
@@ -65,7 +65,7 @@ override_dh_installchangelogs:
 	dh_installchangelogs gnetlist-legacy/ChangeLog  -p geda-gnetlist
 	dh_installchangelogs gsymcheck/ChangeLog -p geda-gsymcheck
 	dh_installchangelogs utils/ChangeLog     -p geda-utils
-	dh_installchangelogs gaf/ChangeLog       -p geda-gaf
+	dh_installchangelogs gaf/ChangeLog       -p geda-cli
 
 override_dh_installexamples:
 	dh_installexamples -XMakefile -X.in
