@@ -7,6 +7,7 @@ TEST_HOME=$(CURDIR)/tmp-home
 	dh $@ --with python2
 
 override_dh_clean:
+	dh_clean
 	rm -rf $(TEST_HOME)
 
 override_dh_auto_configure:
