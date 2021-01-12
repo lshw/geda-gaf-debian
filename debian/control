@@ -195,7 +195,7 @@ Description: GPL EDA -- Electronics design software (gaf utility)
  netlist formats, analog and digital simulation, and printed circuit board
  (PCB) layout.
  .
- This package contains gaf utility.
+ This package contains the gaf utility.
 
 Package: geda-examples
 Recommends: geda
