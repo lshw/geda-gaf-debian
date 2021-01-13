@@ -30,7 +30,7 @@ geda-gaf (1:1.8.2-10) unstable; urgency=medium
 geda-gaf (1:1.8.2-9) unstable; urgency=medium
 
   * Set doc-main-package to geda-docs (Closes: #904949)
-  * Add maintainer scripts to convert libgeda-dev doc dir from symlink to a 
+  * Add maintainer scripts to convert libgeda-dev doc dir from symlink to a
     real dir (Closes: #905201)
 
  -- أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>  Thu, 02 Aug 2018 16:13:28 +0200
@@ -119,7 +119,7 @@ geda-gaf (1:1.8.2-1) unstable; urgency=low
   * update control file to match overrides for libgeda section
 
   [ أحمد المحمودي (Ahmed El-Mahmoudy) ]
-  * use guile 1.8 for ia64 & hurd-i386, closes: #716727  
+  * use guile 1.8 for ia64 & hurd-i386, closes: #716727
 
  -- Bdale Garbee <bdale@gag.com>  Thu, 26 Sep 2013 13:30:06 -0600
 
