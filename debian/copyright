@@ -1,10 +1,10 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: geda-gaf
-Upstream-Contact: Ales Hvezda and gEDA Contributors <geda-dev@geda.seul.org>
-Source: http://geda.seul.org
+Upstream-Contact: gEDA Contributors <geda-user@delorie.com>
+Source: http://geda-project.org/
 
 Files: *
-Copyright: 1998-2019 Ales Hvezda and gEDA Contributors <geda-dev@geda.seul.org> (see changelog for details)
+Copyright: 1998-2019 Ales Hvezda and gEDA Contributors <geda-user@delorie.com> (see changelog for details)
 License: GPL-2+
 
 Files: debian/*
