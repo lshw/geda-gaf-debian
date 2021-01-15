@@ -103,7 +103,7 @@ Description: GPL EDA -- Electronics design software (symbols library)
 Package: geda-gschem
 Architecture: any
 Breaks: geda (<= 19990516-1)
-Depends: ${misc:Depends}, ${shlibs:Depends}, geda-symbols (>= 1:1.7.1), geda-symbols (<< 1:1.9.0~)
+Depends: ${misc:Depends}, ${shlibs:Depends}, geda-symbols (>= 1:1.7.1), geda-symbols (<< 1:1.11.0~)
 Recommends: extra-xdg-menus
 Description: GPL EDA -- Electronics design software (schematic editor)
  The gEDA project has produced and continues working on a full GPL'd suite and
@@ -120,7 +120,7 @@ Description: GPL EDA -- Electronics design software (schematic editor)
 Package: geda-gattrib
 Architecture: any
 Breaks: geda (<= 19990516-1)
-Depends: ${misc:Depends}, ${shlibs:Depends}, geda-symbols (>= 1:1.7.1), geda-symbols (<< 1:1.9.0~)
+Depends: ${misc:Depends}, ${shlibs:Depends}, geda-symbols (>= 1:1.7.1), geda-symbols (<< 1:1.11.0~)
 Recommends: extra-xdg-menus
 Description: GPL EDA -- Electronics design software (attribute editor)
  The gEDA project has produced and continues working on a full GPL'd suite and
@@ -137,7 +137,7 @@ Description: GPL EDA -- Electronics design software (attribute editor)
 Package: geda-gnetlist
 Architecture: any
 Breaks: geda (<= 19990516-1)
-Depends: ${misc:Depends}, ${shlibs:Depends}, ${python:Depends}, geda-symbols (>= 1:1.7.1), geda-symbols (<< 1:1.9.0~)
+Depends: ${misc:Depends}, ${shlibs:Depends}, ${python:Depends}, geda-symbols (>= 1:1.7.1), geda-symbols (<< 1:1.11.0~)
 Description: GPL EDA -- Electronics design software (netlister)
  The gEDA project has produced and continues working on a full GPL'd suite and
  toolkit of Electronic Design Automation tools. These tools are used for
@@ -152,7 +152,7 @@ Description: GPL EDA -- Electronics design software (netlister)
 
 Package: geda-gsymcheck
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}, geda-symbols (>= 1:1.7.1), geda-symbols (<< 1:1.9.0~)
+Depends: ${misc:Depends}, ${shlibs:Depends}, geda-symbols (>= 1:1.7.1), geda-symbols (<< 1:1.11.0~)
 Description: GPL EDA -- Electronics design software (symbol checker)
  The gEDA project has produced and continues working on a full GPL'd suite and
  toolkit of Electronic Design Automation tools. These tools are used for
