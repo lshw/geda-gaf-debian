@@ -1,3 +1,5 @@
+guilemodule.so libgeda47 #MINVER#
+ initguile@Base 1:1.10.2
 libgeda.so.47 libgeda47 #MINVER#
 * Build-Depends-Package: libgeda-dev
  PAPERSIZEtoWORLD@Base 1.6.0
@@ -1003,3 +1005,5 @@ libxornstorage.so.0 libgeda47 #MINVER#
  xornsch_set_text_data@Base 1:1.10.0
  xornsch_set_text_size@Base 1:1.10.0
  xornsch_set_visibility@Base 1:1.10.0
+storagemodule.so libgeda47 #MINVER#
+ initstorage@Base 1:1.10.2

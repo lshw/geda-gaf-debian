@@ -36,6 +36,23 @@ override_dh_auto_install:
 	dh_auto_install --sourcedirectory=symbols    -- DESTDIR=$(CURDIR)/debian/geda-symbols
 	dh_auto_install --sourcedirectory=docs       -- DESTDIR=$(CURDIR)/debian/geda-doc
 	dh_auto_install --sourcedirectory=examples   -- DESTDIR=$(CURDIR)/debian/geda-examples
+	mv $(CURDIR)/debian/tmp/usr/lib/python2.7/dist-packages/xorn/storagemodule.so \
+	   $(CURDIR)/debian/tmp/usr/lib/python2.7/dist-packages/xorn/storage.$(DEB_HOST_MULTIARCH).so
+	mv $(CURDIR)/debian/tmp/usr/lib/python2.7/dist-packages/xorn/guilemodule.so \
+	   $(CURDIR)/debian/tmp/usr/lib/python2.7/dist-packages/xorn/guile.$(DEB_HOST_MULTIARCH).so
+	rm $(CURDIR)/debian/tmp/usr/lib/python2.7/dist-packages/*/*.py?
+	rm $(CURDIR)/debian/tmp/usr/lib/python2.7/dist-packages/*/*/*.py?
+	rm $(CURDIR)/debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/xorn/*.py?
+	rm $(CURDIR)/debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/xorn/backends/*.py?
+	mv $(CURDIR)/debian/tmp/usr/bin/gnetlist \
+	   $(CURDIR)/debian/geda-gnetlist/usr/bin/gnetlist
+	mkdir -p $(CURDIR)/debian/geda-gnetlist/usr/lib/$(DEB_HOST_MULTIARCH)/xorn
+	mv $(CURDIR)/debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/xorn/backends \
+	   $(CURDIR)/debian/geda-gnetlist/usr/lib/$(DEB_HOST_MULTIARCH)/xorn/backends
+	mv $(CURDIR)/debian/geda-doc/usr/share/man/man1/gnetlist.1 \
+	   $(CURDIR)/debian/geda-gnetlist/usr/share/man/man1/gnetlist.1
+	rmdir $(CURDIR)/debian/geda-doc/usr/share/man/man1/
+	rmdir $(CURDIR)/debian/geda-doc/usr/share/man/
 
 override_dh_installdocs:
 	dh_installdocs -Ngeda -Ngeda-doc
