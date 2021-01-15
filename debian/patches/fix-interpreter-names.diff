@@ -1,0 +1,36 @@
+Description: Invoke Python interpreters using canonical form
+Author: Roland Lutz
+Last-Update: 2021-01-15
+
+--- geda-gaf-1.10.2.orig/utils/scripts/garchive.py
++++ geda-gaf-1.10.2/utils/scripts/garchive.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3
+ #
+ # Copyright (C) 2003 Stuart Brorson <sdb@cloud9.net>
+ #
+--- geda-gaf-1.10.2.orig/utils/scripts/tragesym
++++ geda-gaf-1.10.2/utils/scripts/tragesym
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python
++#!/usr/bin/python3
+ # coding: iso8859-1
+ ############################################################################
+ #    tragesym  - create gEDA symbols out of structured textfiles
+--- geda-gaf-1.10.2.orig/xorn/src/command/gnetlist.in
++++ geda-gaf-1.10.2/xorn/src/command/gnetlist.in
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python2
+ # gnetlist - wrapper script for invoking the gEDA netlister
+ # Copyright (C) 1998-2010 Ales Hvezda
+ # Copyright (C) 1998-2010 gEDA Contributors (see ChangeLog for details)
+--- geda-gaf-1.10.2.orig/xorn/src/command/xorn.in
++++ geda-gaf-1.10.2/xorn/src/command/xorn.in
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2.7
++#!/usr/bin/env python2
+ # Copyright (C) 2013-2020 Roland Lutz
+ #
+ # This program is free software; you can redistribute it and/or modify
