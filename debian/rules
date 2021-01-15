@@ -40,6 +40,8 @@ override_dh_auto_install:
 	   $(CURDIR)/debian/tmp/usr/lib/python2.7/dist-packages/xorn/storage.$(DEB_HOST_MULTIARCH).so
 	mv $(CURDIR)/debian/tmp/usr/lib/python2.7/dist-packages/xorn/guilemodule.so \
 	   $(CURDIR)/debian/tmp/usr/lib/python2.7/dist-packages/xorn/guile.$(DEB_HOST_MULTIARCH).so
+	sed -i "/dependency_libs/ s/'.*'/''/" \
+	   $(CURDIR)/debian/tmp/usr/lib/python2.7/dist-packages/xorn/*.la
 	rm $(CURDIR)/debian/tmp/usr/lib/python2.7/dist-packages/*/*.py?
 	rm $(CURDIR)/debian/tmp/usr/lib/python2.7/dist-packages/*/*/*.py?
 	rm $(CURDIR)/debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/xorn/*.py?
