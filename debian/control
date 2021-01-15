@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Debian Electronics Team <pkg-electronics-devel@lists.alioth.debian.org>
 Uploaders: Peter Clifton <pcjc2@cam.ac.uk>, أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>
 Standards-Version: 4.4.1
-Build-Depends: debhelper (>= 11), libgtk2.0-dev (>= 2.16.0), guile-2.2-dev, libgd-dev, libxml-parser-perl, ghostscript, transfig, groff, libglib2.0-dev, flex, intltool, libfam-dev | libgamin-dev, dh-python, python-all-dev, texinfo
+Build-Depends: debhelper (>= 11), libgtk2.0-dev (>= 2.16.0), guile-2.2-dev, libgd-dev, libxml-parser-perl, ghostscript, transfig, groff, libglib2.0-dev, flex, intltool, libfam-dev | libgamin-dev, dh-python, python2-dev, texinfo
 Homepage: http://www.geda-project.org/
 Vcs-Git: https://salsa.debian.org/electronics-team/geda-gaf.git
 Vcs-Browser: https://salsa.debian.org/electronics-team/geda-gaf
@@ -30,7 +30,7 @@ Description: GPL EDA -- Electronics design software (metapackage)
 Package: libgeda47
 Architecture: any
 Section: libs
-Depends: ${misc:Depends}, ${shlibs:Depends}, libgeda-common (>= ${source:Version}), libgeda-common (<< ${source:Version}.1~)
+Depends: ${misc:Depends}, ${shlibs:Depends}, libgeda-common (>= ${source:Version}), libgeda-common (<< ${source:Version}.1~), python2 (>= 2.7~), python2 (<< 2.8)
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
 Description: GPL EDA -- Electronics design software (library files)
@@ -48,7 +48,7 @@ Description: GPL EDA -- Electronics design software (library files)
 Package: libgeda-dev
 Architecture: any
 Section: libdevel
-Depends: ${misc:Depends}, ${shlibs:Depends}, libgeda47 (= ${binary:Version}), libgtk2.0-dev, guile-2.2-dev, libgd-dev
+Depends: ${misc:Depends}, libgeda47 (= ${binary:Version}), libgtk2.0-dev, guile-2.2-dev, libgd-dev
 Pre-Depends: ${misc:Pre-Depends}
 Description: GPL EDA -- Electronics design software (development files)
  The gEDA project has produced and continues working on a full GPL'd suite and
@@ -137,7 +137,7 @@ Description: GPL EDA -- Electronics design software (attribute editor)
 Package: geda-gnetlist
 Architecture: any
 Breaks: geda (<= 19990516-1)
-Depends: ${misc:Depends}, ${shlibs:Depends}, geda-symbols (>= 1:1.7.1), geda-symbols (<< 1:1.9.0~)
+Depends: ${misc:Depends}, ${shlibs:Depends}, ${python:Depends}, geda-symbols (>= 1:1.7.1), geda-symbols (<< 1:1.9.0~)
 Description: GPL EDA -- Electronics design software (netlister)
  The gEDA project has produced and continues working on a full GPL'd suite and
  toolkit of Electronic Design Automation tools. These tools are used for
@@ -184,7 +184,7 @@ Description: GPL EDA -- Electronics design software (utilities)
 
 Package: geda-cli
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}, python3, gawk, mawk
+Depends: ${misc:Depends}, ${shlibs:Depends}, gawk, mawk
 Description: GPL EDA -- Electronics design software (gaf utility)
  The gEDA project has produced and continues working on a full GPL'd suite and
  toolkit of Electronic Design Automation tools. These tools are used for
