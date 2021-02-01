@@ -1,0 +1,24 @@
+Description: Don't export private C++ symbols
+Author: Roland Lutz
+Last-Update: 2021-02-01
+
+--- geda-gaf-1.10.2.orig/xorn/src/storage/Makefile.am
++++ geda-gaf-1.10.2/xorn/src/storage/Makefile.am
+@@ -15,7 +15,7 @@
+ # Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+ 
+ AM_CPPFLAGS = -I$(top_srcdir)/include
+-AM_CXXFLAGS = -Wall -W
++AM_CXXFLAGS = -Wall -W -Wl,--version-script=$(srcdir)/version-script
+ 
+ lib_LTLIBRARIES = libxornstorage.la
+ libxornstorage_la_SOURCES = \
+--- /dev/null
++++ geda-gaf-1.10.2/xorn/src/storage/version-script
+@@ -0,0 +1,6 @@
++{
++	global:
++		xorn*;
++	local:
++		*;
++};

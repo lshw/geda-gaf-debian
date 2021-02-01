@@ -47,11 +47,8 @@ libgeda.so.47 libgeda47 #MINVER#
  default_init_top@Base 1:1.10.0
  default_keep_invisible@Base 1.6.0
  default_make_backup_files@Base 1:1.8.0
-#MISSING: 1:1.10.0
  default_promote_invisible@Base 1.6.0
-#MISSING: 1:1.10.0
  detach_attrib_x@Base 1:1.8.0
-#MISSING: 1:1.10.0
  do_logging@Base 1.6.0
  eda_config_error_quark@Base 1:1.10.0
  eda_config_get_boolean@Base 1:1.10.0
@@ -141,16 +138,6 @@ libgeda.so.47 libgeda47 #MINVER#
  f_normalize_filename@Base 1.6.0
  f_open@Base 1.6.0
  f_open_flags@Base 1.6.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
  f_save@Base 1.6.0
  follow_symlinks@Base 1.6.0
  g_rc_always_promote_attributes@Base 1.6.0
@@ -164,12 +151,10 @@ libgeda.so.47 libgeda47 #MINVER#
  g_rc_make_backup_files@Base 1:1.8.0
  g_rc_mode_general@Base 1.6.0
  g_rc_parse@Base 1.6.0
-#MISSING: 1:1.10.0
  g_rc_parse_handler@Base 1:1.8.0
  g_rc_parse_local@Base 1:1.8.0
  g_rc_parse_system@Base 1:1.8.0
  g_rc_parse_user@Base 1:1.8.0
-#MISSING: 1:1.10.0
  g_rc_print_color_map@Base 1.6.0
  g_rc_promote_invisible@Base 1.6.0
  g_rc_rc_config@Base 1:1.10.0
@@ -179,7 +164,6 @@ libgeda.so.47 libgeda47 #MINVER#
  g_rc_scheme_directory@Base 1.6.0
  g_rc_source_library@Base 1.6.0
  g_rc_source_library_search@Base 1.6.0
-#MISSING: 1:1.10.0
  g_rc_world_size@Base 1.6.0
  g_read_file@Base 1.6.0
  g_read_file__body@Base 1:1.8.0
@@ -248,28 +232,18 @@ libgeda.so.47 libgeda47 #MINVER#
  o_arc_mirror_world@Base 1.6.0
  o_arc_modify@Base 1.6.0
  o_arc_new@Base 1.6.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
  o_arc_read@Base 1.6.0
-#MISSING: 1:1.10.0
  o_arc_rotate_world@Base 1.6.0
  o_arc_save@Base 1.6.0
  o_arc_shortest_distance@Base 1.6.0
  o_arc_translate_world@Base 1.6.0
  o_arc_within_sweep@Base 1.6.0
  o_attrib_add@Base 1.6.0
-#MISSING: 1:1.10.0
  o_attrib_attach@Base 1.6.0
  o_attrib_attach_list@Base 1.6.0
  o_attrib_detach_all@Base 1.6.0
-#MISSING: 1:1.10.0
  o_attrib_find_attrib_by_name@Base 1.6.0
  o_attrib_find_floating_attribs@Base 1.6.0
-#MISSING: 1:1.10.0
  o_attrib_get_name_value@Base 1.6.0
  o_attrib_is_attached@Base 1.6.0
  o_attrib_is_inherited@Base 1.6.0
@@ -281,7 +255,6 @@ libgeda.so.47 libgeda47 #MINVER#
  o_attrib_search_inherited_attribs_by_name@Base 1.6.0
  o_attrib_search_object_attribs_by_name@Base 1.6.0
  o_attrib_string_get_name_value@Base 1.6.0
-#MISSING: 1:1.10.0
  o_bounds_invalidate@Base 1.6.0
  o_box_copy@Base 1.6.0
  o_box_get_position@Base 1.6.0
@@ -289,31 +262,18 @@ libgeda.so.47 libgeda47 #MINVER#
  o_box_modify@Base 1.6.0
  o_box_modify_all@Base 1:1.8.0
  o_box_new@Base 1.6.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
  o_box_read@Base 1.6.0
-#MISSING: 1:1.10.0
  o_box_rotate_world@Base 1.6.0
  o_box_save@Base 1.6.0
  o_box_shortest_distance@Base 1.6.0
  o_box_translate_world@Base 1.6.0
-#MISSING: 1:1.10.0
  o_bus_copy@Base 1.6.0
  o_bus_get_position@Base 1.6.0
  o_bus_mirror_world@Base 1.6.0
  o_bus_modify@Base 1.6.0
  o_bus_new@Base 1.6.0
  o_bus_orientation@Base 1.6.0
-#MISSING: 1:1.10.0
  o_bus_read@Base 1.6.0
-#MISSING: 1:1.10.0
  o_bus_rotate_world@Base 1.6.0
  o_bus_save@Base 1.6.0
  o_bus_translate_world@Base 1.6.0
@@ -322,17 +282,7 @@ libgeda.so.47 libgeda47 #MINVER#
  o_circle_mirror_world@Base 1.6.0
  o_circle_modify@Base 1.6.0
  o_circle_new@Base 1.6.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
  o_circle_read@Base 1.6.0
-#MISSING: 1:1.10.0
  o_circle_rotate_world@Base 1.6.0
  o_circle_save@Base 1.6.0
  o_circle_shortest_distance@Base 1.6.0
@@ -348,7 +298,6 @@ libgeda.so.47 libgeda47 #MINVER#
  o_complex_new_embedded@Base 1.6.0
  o_complex_promote_attribs@Base 1.6.0
  o_complex_read@Base 1.6.0
-#MISSING: 1:1.10.0
  o_complex_rotate_world@Base 1.6.0
  o_complex_save@Base 1.6.0
  o_complex_shortest_distance@Base 1.6.0
@@ -360,7 +309,6 @@ libgeda.so.47 libgeda47 #MINVER#
  o_get_fill_options@Base 1.6.0
  o_get_line_options@Base 1.6.0
  o_get_page@Base 1:1.8.0
-#MISSING: 1:1.10.0
  o_get_parent@Base 1:1.8.0
  o_get_position@Base 1.6.0
  o_glist_copy_all@Base 1.6.0
@@ -375,32 +323,20 @@ libgeda.so.47 libgeda47 #MINVER#
  o_line_mirror_world@Base 1.6.0
  o_line_modify@Base 1.6.0
  o_line_new@Base 1.6.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
  o_line_read@Base 1.6.0
-#MISSING: 1:1.10.0
  o_line_rotate_world@Base 1.6.0
  o_line_save@Base 1.6.0
-#MISSING: 1:1.10.0
  o_line_shortest_distance@Base 1.6.0
  o_line_translate_world@Base 1.6.0
  o_mirror_world@Base 1.6.0
  o_net_consolidate@Base 1.6.0
  o_net_copy@Base 1.6.0
  o_net_get_position@Base 1.6.0
-#MISSING: 1:1.10.0
  o_net_mirror_world@Base 1.6.0
  o_net_modify@Base 1.6.0
  o_net_new@Base 1.6.0
  o_net_orientation@Base 1.6.0
-#MISSING: 1:1.10.0
  o_net_read@Base 1.6.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
  o_net_rotate_world@Base 1.6.0
  o_net_save@Base 1.6.0
  o_net_translate_world@Base 1.6.0
@@ -412,9 +348,7 @@ libgeda.so.47 libgeda47 #MINVER#
  o_path_modify@Base 1.6.0
  o_path_new@Base 1.6.0
  o_path_new_take_path@Base 1:1.10.0
-#MISSING: 1:1.10.0
  o_path_read@Base 1.6.0
-#MISSING: 1:1.10.0
  o_path_rotate_world@Base 1.6.0
  o_path_save@Base 1.6.0
  o_path_shortest_distance@Base 1.6.0
@@ -432,9 +366,7 @@ libgeda.so.47 libgeda47 #MINVER#
  o_picture_modify@Base 1.6.0
  o_picture_modify_all@Base 1:1.8.0
  o_picture_new@Base 1.6.0
-#MISSING: 1:1.10.0
  o_picture_read@Base 1.6.0
-#MISSING: 1:1.10.0
  o_picture_rotate_world@Base 1.6.0
  o_picture_save@Base 1.6.0
  o_picture_set_from_buffer@Base 1:1.8.0
@@ -447,9 +379,7 @@ libgeda.so.47 libgeda47 #MINVER#
  o_pin_mirror_world@Base 1.6.0
  o_pin_modify@Base 1.6.0
  o_pin_new@Base 1.6.0
-#MISSING: 1:1.10.0
  o_pin_read@Base 1.6.0
-#MISSING: 1:1.10.0
  o_pin_rotate_world@Base 1.6.0
  o_pin_save@Base 1.6.0
  o_pin_set_type@Base 1.6.0
@@ -458,14 +388,11 @@ libgeda.so.47 libgeda47 #MINVER#
  o_read@Base 1.6.0
  o_read_attribs@Base 1.6.0
  o_read_buffer@Base 1.6.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
  o_remove_change_notify@Base 1:1.8.0
  o_rotate_world@Base 1.6.0
  o_save@Base 1.6.0
  o_save_buffer@Base 1.6.0
  o_save_objects@Base 1.6.0
-#MISSING: 1:1.10.0
  o_selection_add@Base 1.6.0
  o_selection_new@Base 1.6.0
  o_selection_print_all@Base 1.6.0
@@ -485,10 +412,7 @@ libgeda.so.47 libgeda47 #MINVER#
  o_text_mirror_world@Base 1.6.0
  o_text_new@Base 1.6.0
  o_text_num_lines@Base 1.6.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
  o_text_read@Base 1.6.0
-#MISSING: 1:1.10.0
  o_text_recreate@Base 1.6.0
  o_text_rotate_world@Base 1.6.0
  o_text_save@Base 1.6.0
@@ -526,7 +450,6 @@ libgeda.so.47 libgeda47 #MINVER#
  pin_type@Base 1:1.8.0
  platform@Base 1:1.8.0
  print_colors@Base 1.6.0
-#MISSING: 1:1.10.0
  print_struct_forw@Base 1.6.0
  promotable_attribs@Base 1:1.8.0
  remove_config_event_x@Base 1:1.10.0
@@ -572,15 +495,10 @@ libgeda.so.47 libgeda47 #MINVER#
  s_color_map_defaults@Base 1.6.0
  s_color_map_from_scm@Base 1.6.0
  s_color_map_to_scm@Base 1.6.0
-#MISSING: 1:1.10.0
  s_color_rgba_decode@Base 1.6.0
  s_color_rgba_encode@Base 1.6.0
  s_conn_add_object@Base 1:1.10.0
-#MISSING: 1:1.10.0
  s_conn_check_midpoint@Base 1.6.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
  s_conn_net_search@Base 1.6.0
  s_conn_print@Base 1.6.0
  s_conn_remove_object@Base 1.6.0
@@ -588,39 +506,23 @@ libgeda.so.47 libgeda47 #MINVER#
  s_conn_remove_other@Base 1.6.0
  s_conn_return_new@Base 1.6.0
  s_conn_return_others@Base 1.6.0
-#MISSING: 1:1.10.0
  s_conn_uniq@Base 1.6.0
  s_conn_update_glist@Base 1.6.0
  s_conn_update_object@Base 1.6.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
  s_delete_object@Base 1.6.0
  s_delete_object_glist@Base 1.6.0
  s_encoding_base64_decode@Base 1.6.0
  s_encoding_base64_encode@Base 1.6.0
  s_expand_env_variables@Base 1.6.0
  s_hierarchy_down_schematic_single@Base 1.6.0
-#MISSING: 1:1.10.0
  s_hierarchy_find_next_page@Base 1.6.0
  s_hierarchy_find_prev_page@Base 1.6.0
-#MISSING: 1:1.10.0
  s_hierarchy_load_subpage@Base 1:1.10.0
  s_hierarchy_print_page@Base 1.6.0
  s_hierarchy_traversepages@Base 1.6.0
  s_log_close@Base 1.6.0
  s_log_init@Base 1.6.0
  s_log_read@Base 1.6.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
  s_object_add_weak_ptr@Base 1:1.8.0
  s_object_remove_weak_ptr@Base 1:1.8.0
  s_object_weak_ref@Base 1:1.8.0
@@ -649,13 +551,6 @@ libgeda.so.47 libgeda47 #MINVER#
  s_page_search_by_page_id@Base 1.6.0
  s_page_weak_ref@Base 1:1.8.0
  s_page_weak_unref@Base 1:1.8.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
  s_path_art_finish@Base 1.6.0
  s_path_curveto@Base 1.6.0
  s_path_free@Base 1.6.0
@@ -678,7 +573,6 @@ libgeda.so.47 libgeda47 #MINVER#
  s_slib_init@Base 1.6.0
  s_slib_print@Base 1.6.0
  s_slib_print_dirs@Base 1.6.0
-#MISSING: 1:1.10.0
  s_slib_search_dirs@Base 1.6.0
  s_slib_search_for_dirname@Base 1.6.0
  s_slib_search_lowlevel@Base 1.6.0
@@ -690,15 +584,7 @@ libgeda.so.47 libgeda47 #MINVER#
  s_textbuffer_new@Base 1.6.0
  s_textbuffer_next@Base 1.6.0
  s_textbuffer_next_line@Base 1.6.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
-#MISSING: 1:1.10.0
  s_toplevel_add_weak_ptr@Base 1:1.8.0
-#MISSING: 1:1.10.0
  s_toplevel_delete@Base 1.6.0
  s_toplevel_get_symbols@Base 1.6.0
  s_toplevel_new@Base 1.6.0
@@ -741,7 +627,6 @@ libgeda.so.47 libgeda47 #MINVER#
  set_picture_data_vector_x@Base 1:1.8.0
  set_picture_x@Base 1:1.8.0
  set_text_x@Base 1:1.8.0
-#MISSING: 1:1.10.0
  string_to_page@Base 1:1.8.0
  sys_config_dirs@Base 1:1.10.0
  sys_data_dirs@Base 1:1.10.0
@@ -750,7 +635,6 @@ libgeda.so.47 libgeda47 #MINVER#
  text_info@Base 1:1.8.0
  translate_object_x@Base 1:1.8.0
  u_basic_breakup_string@Base 1.6.0
-#MISSING: 1:1.10.0
  user_config_context@Base 1:1.10.0
  vstbl_get_val@Base 1.6.0
  vstbl_lookup_str@Base 1.6.0
@@ -799,46 +683,6 @@ libgedacairo.so.1 libgeda47 #MINVER#
  eda_renderer_new@Base 1:1.10.0
  eda_renderer_set_color_map@Base 1:1.10.0
 libxornstorage.so.0 libgeda47 #MINVER#
-* Build-Depends-Package: libgeda-dev
- _Z13data_is_valid13xorn_obtype_tPKv@Base 1:1.10.0
- _Z9copy_data13xorn_obtype_tPKv@Base 1:1.10.0
- _ZN13xorn_revisionC1EPS_@Base 1:1.10.0
- _ZN13xorn_revisionC1Ev@Base 1:1.10.0
- _ZN13xorn_revisionC2EPS_@Base 1:1.10.0
- _ZN13xorn_revisionC2Ev@Base 1:1.10.0
- _ZN13xorn_revisionD1Ev@Base 1:1.10.0
- _ZN13xorn_revisionD2Ev@Base 1:1.10.0
- _ZN7obstate10dec_refcntEv@Base 1:1.10.0
- _ZN7obstate10inc_refcntEv@Base 1:1.10.0
- _ZN7obstateC1E13xorn_obtype_tPKv@Base 1:1.10.0
- _ZN7obstateC2E13xorn_obtype_tPKv@Base 1:1.10.0
- _ZN7obstateD1Ev@Base 1:1.10.0
- _ZN7obstateD2Ev@Base 1:1.10.0
- _ZNSt12_Vector_baseIP11xorn_objectSaIS1_EED1Ev@Base 1:1.10.2
- _ZNSt12_Vector_baseIP11xorn_objectSaIS1_EED2Ev@Base 1:1.10.2
- _ZNSt3mapIP11xorn_objectSt6vectorIS1_SaIS1_EESt4lessIS1_ESaISt4pairIKS1_S4_EEEixEOS1_@Base 1:1.10.0
- _ZNSt3mapIP11xorn_objectSt6vectorIS1_SaIS1_EESt4lessIS1_ESaISt4pairIKS1_S4_EEEixERS8_@Base 1:1.10.0
- _ZNSt6vectorIP11xorn_objectSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_@Base 1:1.10.0
- _ZNSt6vectorIP11xorn_objectSaIS1_EE8_M_eraseEN9__gnu_cxx17__normal_iteratorIPS1_S3_EE@Base 1:1.10.0
- _ZNSt8_Rb_treeIP11xorn_objectS1_St9_IdentityIS1_ESt4lessIS1_ESaIS1_EE16_M_insert_uniqueIRKS1_EESt4pairISt17_Rb_tree_iteratorIS1_EbEOT_@Base 1:1.10.0
- _ZNSt8_Rb_treeIP11xorn_objectS1_St9_IdentityIS1_ESt4lessIS1_ESaIS1_EE24_M_get_insert_unique_posERKS1_@Base 1:1.10.0
- _ZNSt8_Rb_treeIP11xorn_objectS1_St9_IdentityIS1_ESt4lessIS1_ESaIS1_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS1_ERKS1_@Base 1:1.10.0
- _ZNSt8_Rb_treeIP11xorn_objectS1_St9_IdentityIS1_ESt4lessIS1_ESaIS1_EEC1ERKS7_@Base 1:1.10.2
- _ZNSt8_Rb_treeIP11xorn_objectS1_St9_IdentityIS1_ESt4lessIS1_ESaIS1_EEC2ERKS7_@Base 1:1.10.2
- _ZNSt8_Rb_treeIP11xorn_objectSt4pairIKS1_P7obstateESt10_Select1stIS6_ESt4lessIS1_ESaIS6_EE24_M_get_insert_unique_posERS3_@Base 1:1.10.0
- _ZNSt8_Rb_treeIP11xorn_objectSt4pairIKS1_P7obstateESt10_Select1stIS6_ESt4lessIS1_ESaIS6_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS6_ERS3_@Base 1:1.10.0
- _ZNSt8_Rb_treeIP11xorn_objectSt4pairIKS1_P7obstateESt10_Select1stIS6_ESt4lessIS1_ESaIS6_EEC1ERKSC_@Base 1:1.10.2
- _ZNSt8_Rb_treeIP11xorn_objectSt4pairIKS1_P7obstateESt10_Select1stIS6_ESt4lessIS1_ESaIS6_EEC2ERKSC_@Base 1:1.10.2
- _ZNSt8_Rb_treeIP11xorn_objectSt4pairIKS1_S1_ESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE24_M_get_insert_unique_posERS3_@Base 1:1.10.0
- _ZNSt8_Rb_treeIP11xorn_objectSt4pairIKS1_S1_ESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS4_ERS3_@Base 1:1.10.0
- _ZNSt8_Rb_treeIP11xorn_objectSt4pairIKS1_S1_ESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE4findERS3_@Base 1:1.10.2
- _ZNSt8_Rb_treeIP11xorn_objectSt4pairIKS1_S1_ESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE5eraseB5cxx11ESt17_Rb_tree_iteratorIS4_E@Base 1:1.10.2
- _ZNSt8_Rb_treeIP11xorn_objectSt4pairIKS1_S1_ESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EEC1ERKSA_@Base 1:1.10.2
- _ZNSt8_Rb_treeIP11xorn_objectSt4pairIKS1_S1_ESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EEC2ERKSA_@Base 1:1.10.2
- _ZNSt8_Rb_treeIP11xorn_objectSt4pairIKS1_St6vectorIS1_SaIS1_EEESt10_Select1stIS7_ESt4lessIS1_ESaIS7_EE24_M_get_insert_unique_posERS3_@Base 1:1.10.0
- _ZNSt8_Rb_treeIP11xorn_objectSt4pairIKS1_St6vectorIS1_SaIS1_EEESt10_Select1stIS7_ESt4lessIS1_ESaIS7_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS7_ERS3_@Base 1:1.10.0
- _ZNSt8_Rb_treeIP11xorn_objectSt4pairIKS1_St6vectorIS1_SaIS1_EEESt10_Select1stIS7_ESt4lessIS1_ESaIS7_EEC1ERKSD_@Base 1:1.10.2
- _ZNSt8_Rb_treeIP11xorn_objectSt4pairIKS1_St6vectorIS1_SaIS1_EEESt10_Select1stIS7_ESt4lessIS1_ESaIS7_EEC2ERKSD_@Base 1:1.10.2
  xorn_add_object@Base 1:1.10.0
  xorn_copy_object@Base 1:1.10.0
  xorn_copy_objects@Base 1:1.10.0

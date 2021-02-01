@@ -1,2 +1,3 @@
 py3.diff
 fix-interpreter-names.diff
+dont-export-private-c++-symbols.patch
