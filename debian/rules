@@ -75,17 +75,17 @@ override_dh_installdocs:
 	done
 
 override_dh_installchangelogs:
-	dh_installchangelogs libgeda/ChangeLog   -p $(COMMONPKG) -p $(LIBPKG)
+	dh_installchangelogs     -p $(COMMONPKG) -p $(LIBPKG)
 	dh_installchangelogs                     -p $(DEVPKG)
-	dh_installchangelogs symbols/ChangeLog   -p geda-symbols
-	dh_installchangelogs docs/ChangeLog      -p geda-doc
-	dh_installchangelogs examples/ChangeLog  -p geda-examples
-	dh_installchangelogs gschem/ChangeLog    -p geda-gschem
-	dh_installchangelogs gattrib/ChangeLog   -p geda-gattrib
-	dh_installchangelogs gnetlist-legacy/ChangeLog  -p geda-gnetlist
-	dh_installchangelogs gsymcheck/ChangeLog -p geda-gsymcheck
-	dh_installchangelogs utils/ChangeLog     -p geda-utils
-	dh_installchangelogs gaf/ChangeLog       -p geda-cli
+	dh_installchangelogs     -p geda-symbols
+	dh_installchangelogs     -p geda-doc
+	dh_installchangelogs     -p geda-examples
+	dh_installchangelogs     -p geda-gschem
+	dh_installchangelogs     -p geda-gattrib
+	dh_installchangelogs     -p geda-gnetlist
+	dh_installchangelogs     -p geda-gsymcheck
+	dh_installchangelogs     -p geda-utils
+	dh_installchangelogs     -p geda-cli
 
 override_dh_installexamples:
 	dh_installexamples -XMakefile -X.in
