@@ -1,0 +1,19 @@
+commit 145c92c297d77616a459dc1ec301972a6a8f52e2
+Author: liu shiwei <liushiwei@gmail.com>
+Date:   2022-11-08 20:40:00
+
+    tag 1.10.2-20210706
+
+diff --git a/configure.ac b/configure.ac
+index 1f1906463..b665cf83e 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -25,7 +25,7 @@ AC_GNU_SOURCE # FIXME for some reason this is needed?
+ # Do version number magic
+ #####################################################################
+ 
+-AX_GIT_VERSION([20201216])
++AX_GIT_VERSION([20210706])
+ 
+ # This is used for keeping the ChangeLog files up-to-date
+ AC_SUBST([CHANGELOG_BASE], [1.0-20070526])
