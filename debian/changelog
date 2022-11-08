@@ -1,3 +1,9 @@
+geda-gaf (1:1.10.2-20210706) UNRELEASED; urgency=medium
+
+  * Imported Upstream version 1.10.2-20210706
+
+ -- liu shiwei <liushiwei@gmail.com>  Tue, 08 Nov 2022 18:37:01 +0800
+
 geda-gaf (1:1.10.0-1~1.gbp698cfa) UNRELEASED; urgency=medium
 
   ** SNAPSHOT build @698cfac150a247599c2da565d163f7c65c11c0e0 **
