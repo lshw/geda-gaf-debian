@@ -1,4 +1,8 @@
 # geda-gaf 是一个简单易用的eda设计工具
+
+# 刚刚发现其实geda-gaf的后续分叉是https://github.com/lepton-eda/lepton-eda，  
+# 是时候转换到lepton-eda了， 文件格式是兼容的，debian11和debian12都带了 lepton-eda. 
+
 在debian11中， 不再包含geda-gaf， 在github上找到了这个项目:<br> 
 https://github.com/rlutz/geda-gaf-debian<br>
 把它和上游的git库合并在一起， 做成了目前这个项目.<br>上游的git库:<br> 
